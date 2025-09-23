@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:gold_katana"
+    },
+    "*": {
+      "item": "almirisweapons:gold_singleedge_blade"
+    },
+    "/": {
+      "item": "almirisweapons:small_stick"
+    }
+  },
+  "pattern": [
+    "*  ",
+    " # ",
+    "  /"
+  ],
+  "result": {
+    "item": "almirisweapons:gold_odachi"
+  },
+  "show_notification": true
+}

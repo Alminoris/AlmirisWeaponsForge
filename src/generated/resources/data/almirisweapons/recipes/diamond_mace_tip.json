@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    " / ",
+    "///",
+    " / "
+  ],
+  "result": {
+    "count": 3,
+    "item": "almirisweapons:diamond_mace_tip"
+  },
+  "show_notification": true
+}

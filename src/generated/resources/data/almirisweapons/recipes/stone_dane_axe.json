@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:stone_axe_tip"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "## ",
+    "##/",
+    "  /"
+  ],
+  "result": {
+    "item": "almirisweapons:stone_dane_axe"
+  },
+  "show_notification": true
+}

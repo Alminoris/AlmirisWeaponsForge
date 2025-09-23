@@ -78,64 +78,49 @@ public class ModItems {
             CURVED_BLADES.put(name, registerItem(name + "_curved_blade", () -> new Item(new Item.Properties())));
 
             HALBERDS.put(name, registerItem(name + "_halberd",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(SwordItem.createAttributes(TOOL_MATERIALS.get(name), 3, -3.0F)))));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 3, -3.0F, new Item.Properties())));
 
             RAPIERS.put(name, registerItem(name + "_rapier",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(SwordItem.createAttributes(TOOL_MATERIALS.get(name), 1, -2.0F)))));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 1, -2.0F, new Item.Properties())));
 
             CLAYMORES.put(name, registerItem(name + "_claymore",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(SwordItem.createAttributes(TOOL_MATERIALS.get(name), 4, -3.0F)))));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 4, -3.0F, new Item.Properties())));
 
             BATTLE_AXES.put(name, registerItem(name + "_battle_axe",
-                    () -> new AxeItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(AxeItem.createAttributes(TOOL_MATERIALS.get(name), 6, -3.1F)))));
+                    () -> new AxeItem(TOOL_MATERIALS.get(name), 6.0F, -3.1F, new Item.Properties())));
 
             SAI.put(name, registerItem(name + "_sai",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(SwordItem.createAttributes(TOOL_MATERIALS.get(name), 0, -1.5F)))));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 0, -1.5F, new Item.Properties())));
 
             MACES.put(name, registerItem(name + "_mace",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(SwordItem.createAttributes(TOOL_MATERIALS.get(name), 5, -3.5F)))));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 5, -3.5F, new Item.Properties())));
 
             DAGGERS.put(name, registerItem(name + "_dagger",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(SwordItem.createAttributes(TOOL_MATERIALS.get(name), 1, -1.75F)))));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 1, -1.75F, new Item.Properties())));
 
             GLAIVES.put(name, registerItem(name + "_glaive",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(SwordItem.createAttributes(TOOL_MATERIALS.get(name), 3, -2.5F)))));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 3, -2.5F, new Item.Properties())));
 
             KATANAS.put(name, registerItem(name + "_katana",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(SwordItem.createAttributes(TOOL_MATERIALS.get(name), 4, -2.25F)))));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 4, -2.25F, new Item.Properties())));
 
             BATTLE_STAVES.put(name, registerItem(name + "_battle_staff",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(SwordItem.createAttributes(TOOL_MATERIALS.get(name), 4, -2.7F)))));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 4, -2.7F, new Item.Properties())));
 
             SCYTHES.put(name, registerItem(name + "_scythe",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(SwordItem.createAttributes(TOOL_MATERIALS.get(name), 4, -2.6F)))));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 4, -2.6F, new Item.Properties())));
 
             ODACHIS.put(name, registerItem(name + "_odachi",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(SwordItem.createAttributes(TOOL_MATERIALS.get(name), 5, -3.25F)))));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 5, -3.25F, new Item.Properties())));
 
             DANE_AXES.put(name, registerItem(name + "_dane_axe",
-                    () -> new AxeItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(AxeItem.createAttributes(TOOL_MATERIALS.get(name), 7, -3.2F)))));
+                    () -> new AxeItem(TOOL_MATERIALS.get(name), 7.0F, -3.2F, new Item.Properties())));
 
             BEARDED_AXES.put(name, registerItem(name + "_bearded_axe",
-                    () -> new AxeItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(AxeItem.createAttributes(TOOL_MATERIALS.get(name), 5, -2.8F)))));
+                    () -> new AxeItem(TOOL_MATERIALS.get(name), 5.0F, -2.8F, new Item.Properties())));
 
             KATARS.put(name, registerItem(name + "_katar",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), new Item.Properties()
-                            .attributes(SwordItem.createAttributes(TOOL_MATERIALS.get(name), 2, -2.0F)))));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 2, -2.0F, new Item.Properties())));
         }
     }
 

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:netherite_axe_tip"
+    },
+    "*": {
+      "item": "almirisweapons:netherite_stabbing_tip"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " #*",
+    " / ",
+    "/  "
+  ],
+  "result": {
+    "item": "almirisweapons:netherite_halberd"
+  },
+  "show_notification": true
+}

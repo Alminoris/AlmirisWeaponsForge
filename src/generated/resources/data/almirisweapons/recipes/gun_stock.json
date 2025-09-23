@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "*": {
+      "item": "almirisweapons:small_stick"
+    }
+  },
+  "pattern": [
+    " #*",
+    "#* ",
+    "#  "
+  ],
+  "result": {
+    "item": "almirisweapons:gun_stock"
+  },
+  "show_notification": true
+}

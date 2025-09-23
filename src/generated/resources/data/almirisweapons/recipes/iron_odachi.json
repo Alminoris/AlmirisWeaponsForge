@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:iron_katana"
+    },
+    "*": {
+      "item": "almirisweapons:iron_singleedge_blade"
+    },
+    "/": {
+      "item": "almirisweapons:small_stick"
+    }
+  },
+  "pattern": [
+    "*  ",
+    " # ",
+    "  /"
+  ],
+  "result": {
+    "item": "almirisweapons:iron_odachi"
+  },
+  "show_notification": true
+}

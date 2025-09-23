@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:wood_mace_tip"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " #",
+    "/ "
+  ],
+  "result": {
+    "item": "almirisweapons:wood_mace"
+  },
+  "show_notification": true
+}

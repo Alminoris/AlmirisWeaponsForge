@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:iron_curved_blade"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "###",
+    " / ",
+    "/  "
+  ],
+  "result": {
+    "item": "almirisweapons:iron_scythe"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "almirisweapons:blunderbuss_barrel"
+    },
+    "L": {
+      "item": "almirisweapons:matchlock_mechanism"
+    },
+    "S": {
+      "item": "almirisweapons:gun_stock"
+    }
+  },
+  "pattern": [
+    "B ",
+    "L ",
+    "S "
+  ],
+  "result": {
+    "item": "almirisweapons:blunderbuss"
+  },
+  "show_notification": true
+}

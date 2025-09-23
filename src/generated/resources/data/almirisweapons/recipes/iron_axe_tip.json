@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "/  ",
+    "///",
+    "/  "
+  ],
+  "result": {
+    "count": 3,
+    "item": "almirisweapons:iron_axe_tip"
+  },
+  "show_notification": true
+}

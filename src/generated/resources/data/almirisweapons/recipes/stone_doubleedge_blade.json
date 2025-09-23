@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "/": {
+      "item": "almirisweapons:stone_singleedge_blade"
+    }
+  },
+  "pattern": [
+    "//"
+  ],
+  "result": {
+    "item": "almirisweapons:stone_doubleedge_blade"
+  },
+  "show_notification": true
+}

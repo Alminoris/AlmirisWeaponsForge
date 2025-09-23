@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:wood_stabbing_tip"
+    },
+    "/": {
+      "item": "almirisweapons:small_stick"
+    }
+  },
+  "pattern": [
+    "##",
+    "/#"
+  ],
+  "result": {
+    "item": "almirisweapons:wood_sai"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:stone_katana"
+    },
+    "*": {
+      "item": "almirisweapons:stone_singleedge_blade"
+    },
+    "/": {
+      "item": "almirisweapons:small_stick"
+    }
+  },
+  "pattern": [
+    "*  ",
+    " # ",
+    "  /"
+  ],
+  "result": {
+    "item": "almirisweapons:stone_odachi"
+  },
+  "show_notification": true
+}

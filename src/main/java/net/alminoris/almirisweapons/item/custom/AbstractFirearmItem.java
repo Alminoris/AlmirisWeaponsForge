@@ -18,6 +18,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.List;
@@ -158,17 +159,19 @@ public abstract class AbstractFirearmItem extends Item
             BulletEntity bullet = new BulletEntity(world, player, bulletStack, stack);
             bullet.setDamage(getConfig().damage());
 
-            bullet.shootFromRotation(player,
+            bullet.shootFromRotation(
+                    player,
                     player.getXRot(),
                     player.getYRot() + (world.random.nextFloat() - 0.5F) * getConfig().spreadAngle(),
                     0.0F,
                     getConfig().velocity(),
-                    getConfig().inaccuracy());
+                    getConfig().inaccuracy()
+            );
 
             world.addFreshEntity(bullet);
         }
 
-        stack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+        stack.hurtAndBreak(1, player, (p) -> {p.broadcastBreakEvent(InteractionHand.MAIN_HAND);});
 
         playSound(world, player, getConfig().shootSound(), getConfig().soundVolume(), getConfig().soundPitch());
 
@@ -217,7 +220,7 @@ public abstract class AbstractFirearmItem extends Item
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag type)
+    public void appendHoverText(ItemStack stack, @Nullable Level context, List<Component> tooltip, TooltipFlag type)
     {
         super.appendHoverText(stack, context, tooltip, type);
 
@@ -255,7 +258,7 @@ public abstract class AbstractFirearmItem extends Item
     }
 
     @Override
-    public int getUseDuration(ItemStack stack, LivingEntity entity)
+    public int getUseDuration(ItemStack stack)
     {
         return getConfig().maxUseTime();
     }

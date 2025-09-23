@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:wood_axe_tip"
+    },
+    "/": {
+      "item": "almirisweapons:small_stick"
+    }
+  },
+  "pattern": [
+    "## ",
+    "# /",
+    "  /"
+  ],
+  "result": {
+    "item": "almirisweapons:wood_bearded_axe"
+  },
+  "show_notification": true
+}

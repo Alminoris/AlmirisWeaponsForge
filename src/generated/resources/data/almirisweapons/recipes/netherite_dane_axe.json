@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:netherite_axe_tip"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "## ",
+    "##/",
+    "  /"
+  ],
+  "result": {
+    "item": "almirisweapons:netherite_dane_axe"
+  },
+  "show_notification": true
+}

@@ -1,7 +1,6 @@
 package net.alminoris.almirisweapons.datagen;
 
 import net.alminoris.almirisweapons.item.ModItems;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
@@ -11,19 +10,19 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
 
 import static net.alminoris.almirisweapons.util.helper.WeaponSetsHelper.MATERIALS;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder
 {
-    public ModRecipeProvider(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pRegistries)
+    public ModRecipeProvider(PackOutput pOutput)
     {
-        super(pOutput, pRegistries);
+        super(pOutput);
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput recipeOutput)
+    protected void buildRecipes(Consumer<FinishedRecipe> recipeOutput)
     {
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BATTLE_STAVES.get("wood").get(), 1)
                 .pattern("  #")
@@ -508,12 +507,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
     }
 
-    private static void planksFromLog(RecipeOutput p_298877_, ItemLike output, ItemLike define)
+    private static void planksFromLog(Consumer<FinishedRecipe> recipeOutput, ItemLike output, ItemLike define)
     {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, output, 4)
                 .requires(define)
                 .group("planks")
                 .unlockedBy("has_log", has(define))
-                .save(p_298877_);
+                .save(recipeOutput);
     }
 }

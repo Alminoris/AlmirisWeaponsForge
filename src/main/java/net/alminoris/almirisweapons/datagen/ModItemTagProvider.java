@@ -44,9 +44,6 @@ public class ModItemTagProvider extends ItemTagsProvider
                     .add(ModItems.BATTLE_AXES.get(name).get())
                     .add(ModItems.DANE_AXES.get(name).get())
                     .add(ModItems.BEARDED_AXES.get(name).get());
-
-            tag(ItemTags.MACE_ENCHANTABLE)
-                    .add(ModItems.MACES.get(name).get());
         }
     }
 }
