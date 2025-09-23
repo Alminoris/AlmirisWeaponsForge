@@ -56,6 +56,5 @@
     "recipes": [
       "almirisweapons:diamond_odachi"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

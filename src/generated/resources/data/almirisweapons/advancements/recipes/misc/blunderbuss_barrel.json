@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:blunderbuss_barrel"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

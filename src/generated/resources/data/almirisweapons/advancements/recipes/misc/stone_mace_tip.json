@@ -30,6 +30,5 @@
     "recipes": [
       "almirisweapons:stone_mace_tip"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

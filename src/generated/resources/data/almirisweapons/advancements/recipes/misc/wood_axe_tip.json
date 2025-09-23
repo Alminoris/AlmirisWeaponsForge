@@ -30,6 +30,5 @@
     "recipes": [
       "almirisweapons:wood_axe_tip"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

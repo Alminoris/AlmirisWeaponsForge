@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:iron_bearded_axe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

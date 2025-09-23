@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:stone_glaive"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

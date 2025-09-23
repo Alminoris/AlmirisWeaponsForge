@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:diamond_sai"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

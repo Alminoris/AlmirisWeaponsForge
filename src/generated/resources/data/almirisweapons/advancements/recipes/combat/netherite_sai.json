@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:netherite_sai"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

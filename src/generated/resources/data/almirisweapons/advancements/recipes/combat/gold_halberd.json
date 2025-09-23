@@ -56,6 +56,5 @@
     "recipes": [
       "almirisweapons:gold_halberd"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

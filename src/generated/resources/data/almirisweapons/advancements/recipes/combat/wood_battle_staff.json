@@ -30,6 +30,5 @@
     "recipes": [
       "almirisweapons:wood_battle_staff"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

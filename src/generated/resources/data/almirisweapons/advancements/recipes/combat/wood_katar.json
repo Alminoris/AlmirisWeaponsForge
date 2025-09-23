@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:wood_katar"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

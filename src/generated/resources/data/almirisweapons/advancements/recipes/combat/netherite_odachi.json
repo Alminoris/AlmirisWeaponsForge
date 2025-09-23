@@ -56,6 +56,5 @@
     "recipes": [
       "almirisweapons:netherite_odachi"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:gold_claymore"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

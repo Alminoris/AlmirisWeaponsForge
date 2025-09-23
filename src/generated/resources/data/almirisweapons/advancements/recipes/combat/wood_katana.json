@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:wood_katana"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

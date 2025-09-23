@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:wood_bearded_axe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:gold_scythe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

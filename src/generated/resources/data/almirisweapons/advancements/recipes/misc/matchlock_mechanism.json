@@ -30,6 +30,5 @@
     "recipes": [
       "almirisweapons:matchlock_mechanism"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

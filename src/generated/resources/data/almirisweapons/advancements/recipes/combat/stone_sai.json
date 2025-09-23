@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:stone_sai"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

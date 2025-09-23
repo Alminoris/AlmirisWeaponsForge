@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:stone_katar"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

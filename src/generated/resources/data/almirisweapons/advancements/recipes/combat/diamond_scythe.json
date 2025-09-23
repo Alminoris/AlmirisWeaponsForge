@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:diamond_scythe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

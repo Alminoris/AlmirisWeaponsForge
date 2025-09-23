@@ -30,6 +30,5 @@
     "recipes": [
       "almirisweapons:netherite_doubleedge_blade"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

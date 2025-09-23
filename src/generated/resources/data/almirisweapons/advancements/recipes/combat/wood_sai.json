@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:wood_sai"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

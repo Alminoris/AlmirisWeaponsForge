@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:wood_claymore"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

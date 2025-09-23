@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:stone_scythe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:iron_glaive"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

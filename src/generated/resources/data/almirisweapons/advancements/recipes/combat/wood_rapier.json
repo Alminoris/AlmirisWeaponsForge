@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:wood_rapier"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

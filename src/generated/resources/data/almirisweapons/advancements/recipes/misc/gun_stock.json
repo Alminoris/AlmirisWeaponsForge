@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:gun_stock"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

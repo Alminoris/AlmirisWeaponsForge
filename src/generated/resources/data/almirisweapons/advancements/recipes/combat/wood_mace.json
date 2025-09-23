@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:wood_mace"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

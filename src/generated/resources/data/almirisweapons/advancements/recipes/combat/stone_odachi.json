@@ -56,6 +56,5 @@
     "recipes": [
       "almirisweapons:stone_odachi"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

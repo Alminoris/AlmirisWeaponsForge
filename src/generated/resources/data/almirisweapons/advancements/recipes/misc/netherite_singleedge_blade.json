@@ -30,6 +30,5 @@
     "recipes": [
       "almirisweapons:netherite_singleedge_blade"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -30,6 +30,5 @@
     "recipes": [
       "almirisweapons:gold_curved_blade"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

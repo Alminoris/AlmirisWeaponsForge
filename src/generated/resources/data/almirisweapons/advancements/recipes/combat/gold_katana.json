@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:gold_katana"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

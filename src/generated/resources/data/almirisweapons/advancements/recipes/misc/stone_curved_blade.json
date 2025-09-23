@@ -30,6 +30,5 @@
     "recipes": [
       "almirisweapons:stone_curved_blade"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

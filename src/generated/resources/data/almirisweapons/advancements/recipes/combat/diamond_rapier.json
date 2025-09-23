@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:diamond_rapier"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:gold_dagger"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

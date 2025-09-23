@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:netherite_dane_axe"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

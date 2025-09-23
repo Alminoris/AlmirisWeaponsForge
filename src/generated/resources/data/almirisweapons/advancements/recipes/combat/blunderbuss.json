@@ -56,6 +56,5 @@
     "recipes": [
       "almirisweapons:blunderbuss"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

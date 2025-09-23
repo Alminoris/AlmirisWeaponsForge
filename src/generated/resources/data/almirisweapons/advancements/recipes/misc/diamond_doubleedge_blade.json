@@ -30,6 +30,5 @@
     "recipes": [
       "almirisweapons:diamond_doubleedge_blade"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

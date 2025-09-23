@@ -43,6 +43,5 @@
     "recipes": [
       "almirisweapons:netherite_katar"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

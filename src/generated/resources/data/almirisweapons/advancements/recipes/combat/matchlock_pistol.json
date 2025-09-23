@@ -56,6 +56,5 @@
     "recipes": [
       "almirisweapons:matchlock_pistol"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

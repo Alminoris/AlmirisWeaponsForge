@@ -81,18 +81,18 @@ public class BulletEntity extends AbstractArrow
     {
         super.onHitBlock(blockHitResult);
 
-        if (!this.level().isClientSide)
+        if (!this.getLevel().isClientSide)
         {
             int count = this.random.nextInt(3);
             if (count > 0) {
                 ItemEntity drop = new ItemEntity(
-                        this.level(),
+                        this.getLevel(),
                         this.getX(),
                         this.getY(),
                         this.getZ(),
                         new ItemStack(Items.IRON_NUGGET, count)
                 );
-                this.level().addFreshEntity(drop);
+                this.getLevel().addFreshEntity(drop);
             }
         }
     }

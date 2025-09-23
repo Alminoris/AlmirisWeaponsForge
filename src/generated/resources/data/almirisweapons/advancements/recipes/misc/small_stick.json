@@ -30,6 +30,5 @@
     "recipes": [
       "almirisweapons:small_stick"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }
