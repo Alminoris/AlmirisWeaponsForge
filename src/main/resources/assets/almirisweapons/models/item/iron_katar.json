@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "almirisweapons:item/iron_katar_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "almirisweapons:item/2d/iron_katar"
+    },
+    "ground": {
+      "parent": "almirisweapons:item/2d/iron_katar"
+    },
+    "fixed": {
+      "parent": "almirisweapons:item/2d/iron_katar"
+    }
+  }
+}

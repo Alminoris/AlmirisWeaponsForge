@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "small_stick",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "almirisweapons:small_stick"
+  }
+}

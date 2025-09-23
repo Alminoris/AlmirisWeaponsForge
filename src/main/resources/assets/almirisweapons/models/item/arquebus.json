@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "almirisweapons:item/arquebus_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "almirisweapons:item/2d/arquebus"
+    },
+    "ground": {
+      "parent": "almirisweapons:item/2d/arquebus"
+    },
+    "fixed": {
+      "parent": "almirisweapons:item/2d/arquebus"
+    }
+  }
+}

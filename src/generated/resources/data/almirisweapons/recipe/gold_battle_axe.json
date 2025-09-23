@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:gold_axe_tip"
+    },
+    "/": {
+      "item": "almirisweapons:small_stick"
+    }
+  },
+  "pattern": [
+    "#/#",
+    " / "
+  ],
+  "result": {
+    "count": 1,
+    "id": "almirisweapons:gold_battle_axe"
+  }
+}

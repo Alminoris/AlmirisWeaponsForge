@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:iron_axe_tip"
+    },
+    "*": {
+      "item": "almirisweapons:iron_stabbing_tip"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " #*",
+    " / ",
+    "/  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "almirisweapons:iron_halberd"
+  }
+}

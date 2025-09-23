@@ -1,0 +1,37 @@
+{
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "almirisweapons:item/gold_katar"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-90, 0, 45],
+			"translation": [0, -1.25, -1.25]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-90, 0, -45],
+			"translation": [0, -1.25, -1.25]
+		},
+		"firstperson_righthand": {
+			"rotation": [-70, -70, 40],
+			"translation": [1.5, 4, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-70, -70, -40],
+			"translation": [1.5, 4, 0]
+		},
+		"ground": {
+			"translation": [0, 2, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"gui": {
+			"scale": [0.75, 0.75, 0.75]
+		},
+		"fixed": {
+			"rotation": [0, -180, 0],
+			"scale": [0.6, 0.6, 0.6]
+		}
+	}
+}

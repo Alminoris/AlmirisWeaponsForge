@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_axe_tip": {
+      "conditions": {
+        "items": [
+          {
+            "items": "almirisweapons:iron_axe_tip"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:stick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "almirisweapons:iron_dane_axe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_iron_axe_tip",
+      "has_stick"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "almirisweapons:iron_dane_axe"
+    ]
+  }
+}

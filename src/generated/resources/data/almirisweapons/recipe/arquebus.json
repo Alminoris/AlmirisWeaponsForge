@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "almirisweapons:arquebus_barrel"
+    },
+    "L": {
+      "item": "almirisweapons:matchlock_mechanism"
+    },
+    "S": {
+      "item": "almirisweapons:gun_stock"
+    }
+  },
+  "pattern": [
+    "BL ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "almirisweapons:arquebus"
+  }
+}

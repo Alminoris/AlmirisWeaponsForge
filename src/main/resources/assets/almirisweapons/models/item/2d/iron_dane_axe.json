@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "almirisweapons:item/iron_dane_axe"
+  }
+}

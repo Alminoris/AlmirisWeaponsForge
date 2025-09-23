@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "almirisweapons:item/iron_odachi_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "almirisweapons:item/2d/iron_odachi"
+    },
+    "ground": {
+      "parent": "almirisweapons:item/2d/iron_odachi"
+    },
+    "fixed": {
+      "parent": "almirisweapons:item/2d/iron_odachi"
+    }
+  }
+}

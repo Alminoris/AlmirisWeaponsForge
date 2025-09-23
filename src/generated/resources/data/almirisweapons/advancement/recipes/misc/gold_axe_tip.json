@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gold_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:gold_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "almirisweapons:gold_axe_tip"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gold_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "almirisweapons:gold_axe_tip"
+    ]
+  }
+}

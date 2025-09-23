@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "almirisweapons:item/diamond_katar_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "almirisweapons:item/2d/diamond_katar"
+    },
+    "ground": {
+      "parent": "almirisweapons:item/2d/diamond_katar"
+    },
+    "fixed": {
+      "parent": "almirisweapons:item/2d/diamond_katar"
+    }
+  }
+}

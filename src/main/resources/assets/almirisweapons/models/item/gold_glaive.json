@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "almirisweapons:item/gold_glaive_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "almirisweapons:item/2d/gold_glaive"
+    },
+    "ground": {
+      "parent": "almirisweapons:item/2d/gold_glaive"
+    },
+    "fixed": {
+      "parent": "almirisweapons:item/2d/gold_glaive"
+    }
+  }
+}

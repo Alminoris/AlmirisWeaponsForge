@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "*": {
+      "item": "minecraft:iron_nugget"
+    },
+    "/": {
+      "item": "almirisweapons:small_stick"
+    }
+  },
+  "pattern": [
+    "  #",
+    "*/ "
+  ],
+  "result": {
+    "count": 1,
+    "id": "almirisweapons:pistol_barrel"
+  }
+}

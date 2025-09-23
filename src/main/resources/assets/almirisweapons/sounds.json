@@ -1,0 +1,37 @@
+{
+  "arquebus_shot": {
+    "sounds": [
+      { "name": "almirisweapons:arquebus_shot", "volume": 1.0, "pitch": 1.0 }
+    ]
+  },
+  "blunderbuss_shot": {
+    "sounds": [
+      { "name": "almirisweapons:blunderbuss_shot", "volume": 1.0, "pitch": 1.0 }
+    ]
+  },
+  "matchlock_pistol_shot": {
+    "sounds": [
+      { "name": "almirisweapons:matchlock_pistol_shot", "volume": 1.0, "pitch": 1.0 }
+    ]
+  },
+  "misfire": {
+    "sounds": [
+      { "name": "almirisweapons:misfire", "volume": 1.0, "pitch": 1.0 }
+    ]
+  },
+  "arquebus_reload": {
+    "sounds": [
+      { "name": "almirisweapons:arquebus_reload", "volume": 1.0, "pitch": 1.0 }
+    ]
+  },
+  "blunderbuss_reload": {
+    "sounds": [
+      { "name": "almirisweapons:blunderbuss_reload", "volume": 1.0, "pitch": 1.0 }
+    ]
+  },
+  "matchlock_pistol_reload": {
+    "sounds": [
+      { "name": "almirisweapons:matchlock_pistol_reload", "volume": 1.0, "pitch": 1.0 }
+    ]
+  }
+}

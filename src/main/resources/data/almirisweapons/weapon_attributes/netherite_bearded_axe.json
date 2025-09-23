@@ -1,0 +1,39 @@
+{
+  "attributes": {
+    "range_bonus": 0.15,
+    "category": "axe",
+    "attacks": [
+      {
+        "hitbox": "HORIZONTAL_PLANE",
+        "damage_multiplier": 1,
+        "angle": 100,
+        "upswing": 0.5,
+        "animation": "bettercombat:one_handed_slash_horizontal_right",
+        "swing_sound": {
+          "id": "bettercombat:axe_slash"
+        }
+      },
+      {
+        "hitbox": "HORIZONTAL_PLANE",
+        "damage_multiplier": 1,
+        "angle": 100,
+        "upswing": 0.5,
+        "animation": "bettercombat:one_handed_slash_horizontal_left",
+        "swing_sound": {
+          "id": "bettercombat:axe_slash"
+        }
+      },
+      {
+        "hitbox": "DIAGONAL_DOWN",
+        "damage_multiplier": 1.1,
+        "angle": 110,
+        "upswing": 0.55,
+        "animation": "bettercombat:one_handed_slash_diagonal_down_right",
+        "swing_sound": {
+          "id": "bettercombat:axe_slash",
+          "pitch": 1.05
+        }
+      }
+    ]
+  }
+}

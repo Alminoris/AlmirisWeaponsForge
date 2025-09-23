@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_small_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "almirisweapons:small_stick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stone_stabbing_tip": {
+      "conditions": {
+        "items": [
+          {
+            "items": "almirisweapons:stone_stabbing_tip"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "almirisweapons:stone_katar"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stone_stabbing_tip",
+      "has_small_stick"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "almirisweapons:stone_katar"
+    ]
+  }
+}

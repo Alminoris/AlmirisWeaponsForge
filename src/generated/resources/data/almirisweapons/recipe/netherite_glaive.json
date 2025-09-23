@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:netherite_singleedge_blade"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  #",
+    " / ",
+    "/  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "almirisweapons:netherite_glaive"
+  }
+}

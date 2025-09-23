@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:netherite_doubleedge_blade"
+    },
+    "/": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "pattern": [
+    " #",
+    "/ "
+  ],
+  "result": {
+    "count": 1,
+    "id": "almirisweapons:netherite_claymore"
+  }
+}

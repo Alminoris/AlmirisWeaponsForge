@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "almirisweapons:item/stone_scythe_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "almirisweapons:item/2d/stone_scythe"
+    },
+    "ground": {
+      "parent": "almirisweapons:item/2d/stone_scythe"
+    },
+    "fixed": {
+      "parent": "almirisweapons:item/2d/stone_scythe"
+    }
+  }
+}

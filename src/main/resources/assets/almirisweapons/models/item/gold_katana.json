@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "almirisweapons:item/gold_katana_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "almirisweapons:item/2d/gold_katana"
+    },
+    "ground": {
+      "parent": "almirisweapons:item/2d/gold_katana"
+    },
+    "fixed": {
+      "parent": "almirisweapons:item/2d/gold_katana"
+    }
+  }
+}

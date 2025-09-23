@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gold_axe_tip": {
+      "conditions": {
+        "items": [
+          {
+            "items": "almirisweapons:gold_axe_tip"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_gold_stabbing_tip": {
+      "conditions": {
+        "items": [
+          {
+            "items": "almirisweapons:gold_stabbing_tip"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:stick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "almirisweapons:gold_halberd"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stick",
+      "has_gold_stabbing_tip",
+      "has_gold_axe_tip"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "almirisweapons:gold_halberd"
+    ]
+  }
+}

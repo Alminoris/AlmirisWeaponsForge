@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "almirisweapons:item/netherite_glaive_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "almirisweapons:item/2d/netherite_glaive"
+    },
+    "ground": {
+      "parent": "almirisweapons:item/2d/netherite_glaive"
+    },
+    "fixed": {
+      "parent": "almirisweapons:item/2d/netherite_glaive"
+    }
+  }
+}

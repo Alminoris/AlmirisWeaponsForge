@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "almirisweapons:wood_doubleedge_blade"
+    },
+    "/": {
+      "item": "minecraft:wooden_sword"
+    }
+  },
+  "pattern": [
+    " # ",
+    "/  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "almirisweapons:wood_claymore"
+  }
+}
