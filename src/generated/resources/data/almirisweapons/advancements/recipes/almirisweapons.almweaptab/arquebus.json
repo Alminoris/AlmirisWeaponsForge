@@ -1,7 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "almirisweapons:arquebus"
+    ]
+  },
   "criteria": {
     "has_arquebus_barrel": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -10,22 +16,10 @@
             ]
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_gun_stock": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "almirisweapons:gun_stock"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
+      }
     },
     "has_matchlock_mechanism": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -34,14 +28,25 @@
             ]
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
+      }
+    },
+    "has_gun_stock": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:gun_stock"
+            ]
+          }
+        ]
+      }
     },
     "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
       "conditions": {
         "recipe": "almirisweapons:arquebus"
-      },
-      "trigger": "minecraft:recipe_unlocked"
+      }
     }
   },
   "requirements": [
@@ -51,10 +56,5 @@
       "has_gun_stock",
       "has_the_recipe"
     ]
-  ],
-  "rewards": {
-    "recipes": [
-      "almirisweapons:arquebus"
-    ]
-  }
+  ]
 }

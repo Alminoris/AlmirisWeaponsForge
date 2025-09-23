@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "key": {
-    "/": {
-      "tag": "minecraft:stone_tool_materials"
-    }
-  },
   "pattern": [
     " / ",
     "///",
     " / "
   ],
+  "key": {
+    "/": {
+      "tag": "minecraft:stone_tool_materials"
+    }
+  },
   "result": {
-    "count": 3,
-    "item": "almirisweapons:stone_mace_tip"
+    "item": "almirisweapons:stone_mace_tip",
+    "count": 3
   }
 }

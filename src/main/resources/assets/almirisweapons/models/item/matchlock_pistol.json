@@ -1,18 +1,18 @@
 {
-  "parent": "minecraft:item/handheld",
-  "loader": "forge:separate_transforms",
-  "base": {
-    "parent": "almirisweapons:item/matchlock_pistol_3d"
-  },
-  "perspectives": {
-    "gui": {
-      "parent": "almirisweapons:item/2d/matchlock_pistol"
+  "parent": "forge:composite",
+  "base": "almirisweapons:item/matchlock_pistol_3d",
+  "overlays": [
+    {
+      "texture": "almirisweapons:item/2d/matchlock_pistol",
+      "transform": "gui"
     },
-    "ground": {
-      "parent": "almirisweapons:item/2d/matchlock_pistol"
+    {
+      "texture": "almirisweapons:item/2d/matchlock_pistol",
+      "transform": "ground"
     },
-    "fixed": {
-      "parent": "almirisweapons:item/2d/matchlock_pistol"
+    {
+      "texture": "almirisweapons:item/2d/matchlock_pistol",
+      "transform": "fixed"
     }
-  }
+  ]
 }

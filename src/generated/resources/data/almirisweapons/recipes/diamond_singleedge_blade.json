@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "key": {
-    "/": {
-      "item": "minecraft:diamond"
-    }
-  },
   "pattern": [
     "  /",
     " / ",
     "/  "
   ],
+  "key": {
+    "/": {
+      "item": "minecraft:diamond"
+    }
+  },
   "result": {
-    "count": 3,
-    "item": "almirisweapons:diamond_singleedge_blade"
+    "item": "almirisweapons:diamond_singleedge_blade",
+    "count": 3
   }
 }

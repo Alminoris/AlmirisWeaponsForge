@@ -1,18 +1,18 @@
 {
-  "parent": "minecraft:item/handheld",
-  "loader": "forge:separate_transforms",
-  "base": {
-    "parent": "almirisweapons:item/gold_halberd_3d"
-  },
-  "perspectives": {
-    "gui": {
-      "parent": "almirisweapons:item/2d/gold_halberd"
+  "parent": "forge:composite",
+  "base": "almirisweapons:item/gold_halberd_3d",
+  "overlays": [
+    {
+      "texture": "almirisweapons:item/2d/gold_halberd",
+      "transform": "gui"
     },
-    "ground": {
-      "parent": "almirisweapons:item/2d/gold_halberd"
+    {
+      "texture": "almirisweapons:item/2d/gold_halberd",
+      "transform": "ground"
     },
-    "fixed": {
-      "parent": "almirisweapons:item/2d/gold_halberd"
+    {
+      "texture": "almirisweapons:item/2d/gold_halberd",
+      "transform": "fixed"
     }
-  }
+  ]
 }

@@ -4,6 +4,8 @@ import net.minecraft.world.item.UseAnim;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.core.particles.ParticleOptions;
 
+import java.util.function.Supplier;
+
 public record FirearmConfig(
         UseAnim useAction,
         int maxUseTime,
@@ -18,11 +20,11 @@ public record FirearmConfig(
         double recoilStrength,
         double recoilVertical,
         float misfireChance,
-        SoundEvent reloadSound,
+        Supplier<SoundEvent> reloadSound,
         float reloadVolume,
         float reloadPitch,
-        SoundEvent shootSound,
-        SoundEvent misfireSound,
+        Supplier<SoundEvent> shootSound,
+        Supplier<SoundEvent> misfireSound,
         float soundVolume,
         float soundPitch,
         ParticleOptions reloadParticle,
@@ -32,16 +34,15 @@ public record FirearmConfig(
         double smokeSpread,
         double smokeSpeed,
         ParticleOptions flameParticle,
-        int flameCount)
-{
-    public static class Builder
-    {
+        int flameCount
+) {
+    public static class Builder {
         private UseAnim useAction = UseAnim.BOW;
         private int maxUseTime = 72000, minUseTicks = 5, reloadTicks = 40;
         private int ammoPerShot = 1, projectilesPerShot = 1;
         private double damage = 1.0, recoilStrength = 0.2, recoilVertical = 0.1;
         private float velocity = 1f, inaccuracy = 0f, spreadAngle = 0f, misfireChance = 0f;
-        private SoundEvent reloadSound, shootSound, misfireSound;
+        private Supplier<SoundEvent> reloadSound, shootSound, misfireSound;
         private float reloadVolume = 1f, reloadPitch = 1f, soundVolume = 1f, soundPitch = 1f;
         private ParticleOptions reloadParticle, smokeParticle, flameParticle;
         private int reloadParticleCount = 0, smokeCount = 0, flameCount = 0;
@@ -60,9 +61,12 @@ public record FirearmConfig(
         public Builder recoilStrength(double val) { this.recoilStrength = val; return this; }
         public Builder recoilVertical(double val) { this.recoilVertical = val; return this; }
         public Builder misfireChance(float val) { this.misfireChance = val; return this; }
-        public Builder reloadSound(SoundEvent val) { this.reloadSound = val; return this; }
-        public Builder shootSound(SoundEvent val) { this.shootSound = val; return this; }
-        public Builder misfireSound(SoundEvent val) { this.misfireSound = val; return this; }
+        public Builder reloadSound(SoundEvent val) { this.reloadSound = () -> val; return this; }
+        public Builder reloadSound(Supplier<SoundEvent> val) { this.reloadSound = val; return this; }
+        public Builder shootSound(SoundEvent val) { this.shootSound = () -> val; return this; }
+        public Builder shootSound(Supplier<SoundEvent> val) { this.shootSound = val; return this; }
+        public Builder misfireSound(SoundEvent val) { this.misfireSound = () -> val; return this; }
+        public Builder misfireSound(Supplier<SoundEvent> val) { this.misfireSound = val; return this; }
         public Builder reloadVolume(float val) { this.reloadVolume = val; return this; }
         public Builder reloadPitch(float val) { this.reloadPitch = val; return this; }
         public Builder soundVolume(float val) { this.soundVolume = val; return this; }
@@ -76,8 +80,7 @@ public record FirearmConfig(
         public Builder flameParticle(ParticleOptions val) { this.flameParticle = val; return this; }
         public Builder flameCount(int val) { this.flameCount = val; return this; }
 
-        public FirearmConfig build()
-        {
+        public FirearmConfig build() {
             return new FirearmConfig(
                     useAction, maxUseTime, minUseTicks, reloadTicks,
                     ammoPerShot, projectilesPerShot, damage, velocity, inaccuracy, spreadAngle,
@@ -86,7 +89,8 @@ public record FirearmConfig(
                     shootSound, misfireSound, soundVolume, soundPitch,
                     reloadParticle, reloadParticleCount,
                     smokeParticle, smokeCount, smokeSpread, smokeSpeed,
-                    flameParticle, flameCount);
+                    flameParticle, flameCount
+            );
         }
     }
 }

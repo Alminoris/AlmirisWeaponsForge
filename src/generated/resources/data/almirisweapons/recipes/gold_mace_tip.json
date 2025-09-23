@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "key": {
-    "/": {
-      "item": "minecraft:gold_ingot"
-    }
-  },
   "pattern": [
     " / ",
     "///",
     " / "
   ],
+  "key": {
+    "/": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
   "result": {
-    "count": 3,
-    "item": "almirisweapons:gold_mace_tip"
+    "item": "almirisweapons:gold_mace_tip",
+    "count": 3
   }
 }

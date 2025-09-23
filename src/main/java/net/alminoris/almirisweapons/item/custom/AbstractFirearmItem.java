@@ -5,6 +5,8 @@ import net.alminoris.almirisweapons.item.ModItems;
 import net.alminoris.almirisweapons.item.render.FirearmItemRenderer;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.InteractionHand;
@@ -18,6 +20,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.client.IItemRenderProperties;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
@@ -27,9 +30,9 @@ import java.util.UUID;
 
 public abstract class AbstractFirearmItem extends Item
 {
-    public AbstractFirearmItem(Item.Properties settings)
+    public AbstractFirearmItem(Item.Properties properties)
     {
-        super(settings);
+        super(properties);
     }
 
     protected abstract FirearmConfig getConfig();
@@ -74,7 +77,7 @@ public abstract class AbstractFirearmItem extends Item
             if (ticksLeft <= 0)
             {
                 playSound(world, player,
-                        getConfig().reloadSound(),
+                        getConfig().reloadSound().get(),
                         getConfig().reloadVolume(),
                         getConfig().reloadPitch());
 
@@ -137,8 +140,8 @@ public abstract class AbstractFirearmItem extends Item
 
         if (world.random.nextFloat() < getConfig().misfireChance())
         {
-            player.sendSystemMessage(Component.translatable("message.almirisweapons.misfire"));
-            playSound(world, player, getConfig().misfireSound(), 1f, 1f);
+            player.sendMessage(new TranslatableComponent("message.almirisweapons.misfire"), player.getUUID());
+            playSound(world, player, getConfig().misfireSound().get(), 1f, 1f);
             startReload(world, player, stack, hand);
             return;
         }
@@ -146,7 +149,7 @@ public abstract class AbstractFirearmItem extends Item
         ItemStack ammo = findAmmo(player);
         if (ammo.isEmpty() || ammo.getCount() < getConfig().ammoPerShot())
         {
-            player.sendSystemMessage(Component.translatable("message.almirisweapons.no_ammo"));
+            player.sendMessage(new TranslatableComponent("message.almirisweapons.no_ammo"), player.getUUID());
             return;
         }
         ammo.shrink(getConfig().ammoPerShot());
@@ -171,7 +174,7 @@ public abstract class AbstractFirearmItem extends Item
 
         stack.hurtAndBreak(1, player, (p) -> {p.broadcastBreakEvent(InteractionHand.MAIN_HAND);});
 
-        playSound(world, player, getConfig().shootSound(), getConfig().soundVolume(), getConfig().soundPitch());
+        playSound(world, player, getConfig().shootSound().get(), getConfig().soundVolume(), getConfig().soundPitch());
 
         if (world instanceof ServerLevel serverWorld)
         {
@@ -224,28 +227,28 @@ public abstract class AbstractFirearmItem extends Item
 
         FirearmConfig cfg = getConfig();
 
-        tooltip.add(Component.empty());
+        tooltip.add(new TextComponent(""));
 
-        tooltip.add(Component.translatable("item.modifiers.mainhand").withStyle(ChatFormatting.GRAY));
+        tooltip.add(new TranslatableComponent("item.modifiers.mainhand").withStyle(ChatFormatting.GRAY));
 
-        tooltip.add(Component.literal(" ")
+        tooltip.add(new TextComponent(" ")
                 .append(cfg.damage() + " ").withStyle(ChatFormatting.DARK_GREEN)
-                .append(Component.translatable("tooltip.almirisweapons.damage")
+                .append(new TranslatableComponent("tooltip.almirisweapons.damage")
                         .withStyle(ChatFormatting.DARK_GREEN)));
 
-        tooltip.add(Component.literal(" ")
+        tooltip.add(new TextComponent(" ")
                 .append((cfg.reloadTicks() / 20f) + "s ").withStyle(ChatFormatting.DARK_GREEN)
-                .append(Component.translatable("tooltip.almirisweapons.reload_time")
+                .append(new TranslatableComponent("tooltip.almirisweapons.reload_time")
                         .withStyle(ChatFormatting.DARK_GREEN)));
 
-        tooltip.add(Component.literal(" ")
+        tooltip.add(new TextComponent(" ")
                 .append(cfg.ammoPerShot() + " ").withStyle(ChatFormatting.DARK_GREEN)
-                .append(Component.translatable("tooltip.almirisweapons.ammo_per_shot")
+                .append(new TranslatableComponent("tooltip.almirisweapons.ammo_per_shot")
                         .withStyle(ChatFormatting.DARK_GREEN)));
 
-        tooltip.add(Component.literal(" ")
+        tooltip.add(new TextComponent(" ")
                 .append((int)(cfg.misfireChance() * 100) + "% ").withStyle(ChatFormatting.DARK_GREEN)
-                .append(Component.translatable("tooltip.almirisweapons.misfire")
+                .append(new TranslatableComponent("tooltip.almirisweapons.misfire")
                         .withStyle(ChatFormatting.DARK_GREEN)));
     }
 
@@ -259,20 +262,5 @@ public abstract class AbstractFirearmItem extends Item
     public int getUseDuration(ItemStack stack)
     {
         return getConfig().maxUseTime();
-    }
-
-    @Override
-    public void initializeClient(java.util.function.Consumer<net.minecraftforge.client.extensions.common.IClientItemExtensions> consumer)
-    {
-        consumer.accept(new net.minecraftforge.client.extensions.common.IClientItemExtensions()
-        {
-            private final FirearmItemRenderer renderer = new FirearmItemRenderer();
-
-            @Override
-            public net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer getCustomRenderer()
-            {
-                return renderer;
-            }
-        });
     }
 }

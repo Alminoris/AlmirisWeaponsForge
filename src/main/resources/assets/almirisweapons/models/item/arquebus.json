@@ -1,18 +1,18 @@
 {
-  "parent": "minecraft:item/handheld",
-  "loader": "forge:separate_transforms",
-  "base": {
-    "parent": "almirisweapons:item/arquebus_3d"
-  },
-  "perspectives": {
-    "gui": {
-      "parent": "almirisweapons:item/2d/arquebus"
+  "parent": "forge:composite",
+  "base": "almirisweapons:item/arquebus_3d",
+  "overlays": [
+    {
+      "texture": "almirisweapons:item/2d/arquebus",
+      "transform": "gui"
     },
-    "ground": {
-      "parent": "almirisweapons:item/2d/arquebus"
+    {
+      "texture": "almirisweapons:item/2d/arquebus",
+      "transform": "ground"
     },
-    "fixed": {
-      "parent": "almirisweapons:item/2d/arquebus"
+    {
+      "texture": "almirisweapons:item/2d/arquebus",
+      "transform": "fixed"
     }
-  }
+  ]
 }

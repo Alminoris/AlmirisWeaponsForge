@@ -8,12 +8,12 @@ import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.resources.model.BakedModel;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 import java.util.UUID;
 
 import static com.mojang.math.Vector3f.XP;
@@ -22,11 +22,11 @@ public class FirearmItemRenderer extends BlockEntityWithoutLevelRenderer {
 
     private static final Map<UUID, Map<InteractionHand, Float>> recoilMap = new HashMap<>();
     private static final Map<UUID, Map<InteractionHand, Integer>> reloadMap = new HashMap<>();
-    private static final RandomSource random = RandomSource.create();
+    private static final Random random = new Random();
 
-    public FirearmItemRenderer() {
-        super(Minecraft.getInstance().getBlockEntityRenderDispatcher(),
-                Minecraft.getInstance().getEntityModels());
+    public FirearmItemRenderer()
+    {
+        super(Minecraft.getInstance().getBlockEntityRenderDispatcher(), Minecraft.getInstance().getEntityModels());
     }
 
     public static void triggerRecoil(UUID player, InteractionHand hand, double strength) {

@@ -1,5 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#/#",
+    " / "
+  ],
   "key": {
     "#": {
       "item": "almirisweapons:gold_axe_tip"
@@ -8,10 +12,6 @@
       "item": "almirisweapons:small_stick"
     }
   },
-  "pattern": [
-    "#/#",
-    " / "
-  ],
   "result": {
     "item": "almirisweapons:gold_battle_axe"
   }

@@ -1,19 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "almirisweapons:gold_claymore"
+    ]
+  },
   "criteria": {
-    "has_gold_doubleedge_blade": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "almirisweapons:gold_doubleedge_blade"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_golden_sword": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -22,14 +16,25 @@
             ]
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
+      }
+    },
+    "has_gold_doubleedge_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:gold_doubleedge_blade"
+            ]
+          }
+        ]
+      }
     },
     "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
       "conditions": {
         "recipe": "almirisweapons:gold_claymore"
-      },
-      "trigger": "minecraft:recipe_unlocked"
+      }
     }
   },
   "requirements": [
@@ -38,10 +43,5 @@
       "has_gold_doubleedge_blade",
       "has_the_recipe"
     ]
-  ],
-  "rewards": {
-    "recipes": [
-      "almirisweapons:gold_claymore"
-    ]
-  }
+  ]
 }

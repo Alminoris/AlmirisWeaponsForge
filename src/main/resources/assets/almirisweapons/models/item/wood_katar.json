@@ -1,18 +1,18 @@
 {
-  "parent": "minecraft:item/handheld",
-  "loader": "forge:separate_transforms",
-  "base": {
-    "parent": "almirisweapons:item/wood_katar_3d"
-  },
-  "perspectives": {
-    "gui": {
-      "parent": "almirisweapons:item/2d/wood_katar"
+  "parent": "forge:composite",
+  "base": "almirisweapons:item/wood_katar_3d",
+  "overlays": [
+    {
+      "texture": "almirisweapons:item/2d/wood_katar",
+      "transform": "gui"
     },
-    "ground": {
-      "parent": "almirisweapons:item/2d/wood_katar"
+    {
+      "texture": "almirisweapons:item/2d/wood_katar",
+      "transform": "ground"
     },
-    "fixed": {
-      "parent": "almirisweapons:item/2d/wood_katar"
+    {
+      "texture": "almirisweapons:item/2d/wood_katar",
+      "transform": "fixed"
     }
-  }
+  ]
 }

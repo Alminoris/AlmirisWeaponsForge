@@ -1,18 +1,18 @@
 {
-  "parent": "minecraft:item/handheld",
-  "loader": "forge:separate_transforms",
-  "base": {
-    "parent": "almirisweapons:item/netherite_claymore_3d"
-  },
-  "perspectives": {
-    "gui": {
-      "parent": "almirisweapons:item/2d/netherite_claymore"
+  "parent": "forge:composite",
+  "base": "almirisweapons:item/netherite_claymore_3d",
+  "overlays": [
+    {
+      "texture": "almirisweapons:item/2d/netherite_claymore",
+      "transform": "gui"
     },
-    "ground": {
-      "parent": "almirisweapons:item/2d/netherite_claymore"
+    {
+      "texture": "almirisweapons:item/2d/netherite_claymore",
+      "transform": "ground"
     },
-    "fixed": {
-      "parent": "almirisweapons:item/2d/netherite_claymore"
+    {
+      "texture": "almirisweapons:item/2d/netherite_claymore",
+      "transform": "fixed"
     }
-  }
+  ]
 }

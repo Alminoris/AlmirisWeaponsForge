@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "key": {
-    "/": {
-      "tag": "minecraft:planks"
-    }
-  },
   "pattern": [
     " / ",
     "///",
     " / "
   ],
+  "key": {
+    "/": {
+      "tag": "minecraft:planks"
+    }
+  },
   "result": {
-    "count": 3,
-    "item": "almirisweapons:wood_mace_tip"
+    "item": "almirisweapons:wood_mace_tip",
+    "count": 3
   }
 }

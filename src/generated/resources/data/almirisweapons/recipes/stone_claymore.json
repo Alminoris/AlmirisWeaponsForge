@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "almirisweapons:stone_doubleedge_blade"
-    },
-    "/": {
-      "item": "minecraft:stone_sword"
-    }
-  },
   "pattern": [
     " #",
     "/ "
   ],
+  "key": {
+    "/": {
+      "item": "minecraft:stone_sword"
+    },
+    "#": {
+      "item": "almirisweapons:stone_doubleedge_blade"
+    }
+  },
   "result": {
     "item": "almirisweapons:stone_claymore"
   }

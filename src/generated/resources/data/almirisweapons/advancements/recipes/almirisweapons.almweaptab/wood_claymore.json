@@ -1,25 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "almirisweapons:wood_claymore"
+    ]
+  },
   "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "almirisweapons:wood_claymore"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_wood_doubleedge_blade": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "almirisweapons:wood_doubleedge_blade"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_wooden_sword": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -28,8 +16,25 @@
             ]
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
+      }
+    },
+    "has_wood_doubleedge_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:wood_doubleedge_blade"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "almirisweapons:wood_claymore"
+      }
     }
   },
   "requirements": [
@@ -38,10 +43,5 @@
       "has_wood_doubleedge_blade",
       "has_the_recipe"
     ]
-  ],
-  "rewards": {
-    "recipes": [
-      "almirisweapons:wood_claymore"
-    ]
-  }
+  ]
 }

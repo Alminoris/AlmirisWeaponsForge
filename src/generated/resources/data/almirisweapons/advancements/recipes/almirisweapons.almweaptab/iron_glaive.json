@@ -1,19 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "almirisweapons:iron_glaive"
+    ]
+  },
   "criteria": {
-    "has_iron_singleedge_blade": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "almirisweapons:iron_singleedge_blade"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_stick": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -22,14 +16,25 @@
             ]
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
+      }
+    },
+    "has_iron_singleedge_blade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:iron_singleedge_blade"
+            ]
+          }
+        ]
+      }
     },
     "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
       "conditions": {
         "recipe": "almirisweapons:iron_glaive"
-      },
-      "trigger": "minecraft:recipe_unlocked"
+      }
     }
   },
   "requirements": [
@@ -38,10 +43,5 @@
       "has_iron_singleedge_blade",
       "has_the_recipe"
     ]
-  ],
-  "rewards": {
-    "recipes": [
-      "almirisweapons:iron_glaive"
-    ]
-  }
+  ]
 }

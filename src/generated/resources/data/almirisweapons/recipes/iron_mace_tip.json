@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "key": {
-    "/": {
-      "item": "minecraft:iron_ingot"
-    }
-  },
   "pattern": [
     " / ",
     "///",
     " / "
   ],
+  "key": {
+    "/": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
   "result": {
-    "count": 3,
-    "item": "almirisweapons:iron_mace_tip"
+    "item": "almirisweapons:iron_mace_tip",
+    "count": 3
   }
 }

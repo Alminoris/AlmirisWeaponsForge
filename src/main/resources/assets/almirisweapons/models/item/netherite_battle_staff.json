@@ -1,18 +1,18 @@
 {
-  "parent": "minecraft:item/handheld",
-  "loader": "forge:separate_transforms",
-  "base": {
-    "parent": "almirisweapons:item/netherite_battle_staff_3d"
-  },
-  "perspectives": {
-    "gui": {
-      "parent": "almirisweapons:item/2d/netherite_battle_staff"
+  "parent": "forge:composite",
+  "base": "almirisweapons:item/netherite_battle_staff_3d",
+  "overlays": [
+    {
+      "texture": "almirisweapons:item/2d/netherite_battle_staff",
+      "transform": "gui"
     },
-    "ground": {
-      "parent": "almirisweapons:item/2d/netherite_battle_staff"
+    {
+      "texture": "almirisweapons:item/2d/netherite_battle_staff",
+      "transform": "ground"
     },
-    "fixed": {
-      "parent": "almirisweapons:item/2d/netherite_battle_staff"
+    {
+      "texture": "almirisweapons:item/2d/netherite_battle_staff",
+      "transform": "fixed"
     }
-  }
+  ]
 }

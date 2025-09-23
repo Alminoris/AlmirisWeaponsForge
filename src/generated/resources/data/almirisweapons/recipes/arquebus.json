@@ -1,5 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BL ",
+    " S "
+  ],
   "key": {
     "B": {
       "item": "almirisweapons:arquebus_barrel"
@@ -11,10 +15,6 @@
       "item": "almirisweapons:gun_stock"
     }
   },
-  "pattern": [
-    "BL ",
-    " S "
-  ],
   "result": {
     "item": "almirisweapons:arquebus"
   }

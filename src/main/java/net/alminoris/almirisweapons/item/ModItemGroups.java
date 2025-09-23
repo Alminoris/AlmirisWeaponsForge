@@ -2,6 +2,7 @@ package net.alminoris.almirisweapons.item;
 
 import net.alminoris.almirisweapons.AlmirisWeapons;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -15,7 +16,7 @@ public class ModItemGroups {
 
         @Override
         public Component getDisplayName() {
-            return Component.translatable("itemGroup." + AlmirisWeapons.MOD_ID + ".almweaptab");
+            return new TranslatableComponent("itemGroup." + AlmirisWeapons.MOD_ID + ".almweaptab");
         }
     };
 }

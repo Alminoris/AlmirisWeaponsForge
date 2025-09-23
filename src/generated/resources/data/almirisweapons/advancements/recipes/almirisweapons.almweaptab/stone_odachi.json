@@ -1,31 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "almirisweapons:stone_odachi"
+    ]
+  },
   "criteria": {
-    "has_small_stick": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "almirisweapons:small_stick"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_stone_katana": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "almirisweapons:stone_katana"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_stone_singleedge_blade": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -34,14 +16,37 @@
             ]
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
+      }
+    },
+    "has_stone_katana": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:stone_katana"
+            ]
+          }
+        ]
+      }
+    },
+    "has_small_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:small_stick"
+            ]
+          }
+        ]
+      }
     },
     "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
       "conditions": {
         "recipe": "almirisweapons:stone_odachi"
-      },
-      "trigger": "minecraft:recipe_unlocked"
+      }
     }
   },
   "requirements": [
@@ -51,10 +56,5 @@
       "has_small_stick",
       "has_the_recipe"
     ]
-  ],
-  "rewards": {
-    "recipes": [
-      "almirisweapons:stone_odachi"
-    ]
-  }
+  ]
 }

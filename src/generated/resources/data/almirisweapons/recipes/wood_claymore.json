@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "almirisweapons:wood_doubleedge_blade"
-    },
-    "/": {
-      "item": "minecraft:wooden_sword"
-    }
-  },
   "pattern": [
     " # ",
     "/  "
   ],
+  "key": {
+    "/": {
+      "item": "minecraft:wooden_sword"
+    },
+    "#": {
+      "item": "almirisweapons:wood_doubleedge_blade"
+    }
+  },
   "result": {
     "item": "almirisweapons:wood_claymore"
   }

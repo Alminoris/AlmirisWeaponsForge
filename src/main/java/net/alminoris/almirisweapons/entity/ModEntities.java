@@ -11,7 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, AlmirisWeapons.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.ENTITIES, AlmirisWeapons.MOD_ID);
 
     public static final RegistryObject<EntityType<BulletEntity>> BULLET =
             ENTITY_TYPES.register("bullet", () -> EntityType.Builder.<BulletEntity>of(BulletEntity::new, MobCategory.MISC)

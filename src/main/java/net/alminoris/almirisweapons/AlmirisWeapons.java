@@ -3,64 +3,70 @@ package net.alminoris.almirisweapons;
 import com.mojang.logging.LogUtils;
 import net.alminoris.almirisweapons.entity.ModEntities;
 import net.alminoris.almirisweapons.entity.client.projectile.BulletEntityRenderer;
-import net.alminoris.almirisweapons.item.ModItemGroups;
 import net.alminoris.almirisweapons.item.ModItems;
 import net.alminoris.almirisweapons.sound.ModSounds;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
-import static net.alminoris.almirisweapons.util.helper.WeaponSetsHelper.MATERIALS;
-
-@Mod(net.alminoris.almirisweapons.AlmirisWeapons.MOD_ID)
-public class AlmirisWeapons
-{
+@Mod(AlmirisWeapons.MOD_ID)
+public class AlmirisWeapons {
     public static final String MOD_ID = "almirisweapons";
 
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public AlmirisWeapons(FMLJavaModLoadingContext context)
+    public AlmirisWeapons()
     {
-        IEventBus modEventBus = context.getModEventBus();
-        modEventBus.addListener(this::commonSetup);
-        MinecraftForge.EVENT_BUS.register(this);
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
-
         ModEntities.register(modEventBus);
-
         ModSounds.register(modEventBus);
 
-        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        modEventBus.addListener(this::commonSetup);
+
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+
     }
 
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event)
-    {
+    public void onServerStarting(ServerStartingEvent event) {
         LOGGER.info("HELLO from server starting");
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
             EntityRenderers.register(ModEntities.BULLET.get(), BulletEntityRenderer::new);
+
+            event.enqueueWork(() -> {
+                Minecraft mc = Minecraft.getInstance();
+
+                ModelResourceLocation arquebusModel = new ModelResourceLocation(
+                        ResourceLocation.fromNamespaceAndPath(AlmirisWeapons.MOD_ID, "arquebus_3d"), "inventory");
+
+                ModelResourceLocation blunderbussModel = new ModelResourceLocation(
+                        ResourceLocation.fromNamespaceAndPath(AlmirisWeapons.MOD_ID, "blunderbuss_3d"), "inventory");
+
+                mc.getItemRenderer().getItemModelShaper().register(ModItems.ARQUEBUS.get(), arquebusModel);
+                mc.getItemRenderer().getItemModelShaper().register(ModItems.BLUNDERBUSS.get(), blunderbussModel);
+            });
         }
     }
 }

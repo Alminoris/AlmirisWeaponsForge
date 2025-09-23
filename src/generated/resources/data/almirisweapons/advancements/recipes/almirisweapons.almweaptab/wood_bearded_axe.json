@@ -1,25 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "almirisweapons:wood_bearded_axe"
+    ]
+  },
   "criteria": {
-    "has_small_stick": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "almirisweapons:small_stick"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "almirisweapons:wood_bearded_axe"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
     "has_wood_axe_tip": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -28,8 +16,25 @@
             ]
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
+      }
+    },
+    "has_small_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:small_stick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "almirisweapons:wood_bearded_axe"
+      }
     }
   },
   "requirements": [
@@ -38,10 +43,5 @@
       "has_small_stick",
       "has_the_recipe"
     ]
-  ],
-  "rewards": {
-    "recipes": [
-      "almirisweapons:wood_bearded_axe"
-    ]
-  }
+  ]
 }

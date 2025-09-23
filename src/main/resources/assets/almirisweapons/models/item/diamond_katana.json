@@ -1,18 +1,18 @@
 {
-  "parent": "minecraft:item/handheld",
-  "loader": "forge:separate_transforms",
-  "base": {
-    "parent": "almirisweapons:item/diamond_katana_3d"
-  },
-  "perspectives": {
-    "gui": {
-      "parent": "almirisweapons:item/2d/diamond_katana"
+  "parent": "forge:composite",
+  "base": "almirisweapons:item/diamond_katana_3d",
+  "overlays": [
+    {
+      "texture": "almirisweapons:item/2d/diamond_katana",
+      "transform": "gui"
     },
-    "ground": {
-      "parent": "almirisweapons:item/2d/diamond_katana"
+    {
+      "texture": "almirisweapons:item/2d/diamond_katana",
+      "transform": "ground"
     },
-    "fixed": {
-      "parent": "almirisweapons:item/2d/diamond_katana"
+    {
+      "texture": "almirisweapons:item/2d/diamond_katana",
+      "transform": "fixed"
     }
-  }
+  ]
 }

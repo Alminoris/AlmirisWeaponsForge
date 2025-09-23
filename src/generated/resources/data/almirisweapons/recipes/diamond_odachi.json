@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "almirisweapons:diamond_katana"
-    },
-    "*": {
-      "item": "almirisweapons:diamond_singleedge_blade"
-    },
-    "/": {
-      "item": "almirisweapons:small_stick"
-    }
-  },
   "pattern": [
     "*  ",
     " # ",
     "  /"
   ],
+  "key": {
+    "*": {
+      "item": "almirisweapons:diamond_singleedge_blade"
+    },
+    "#": {
+      "item": "almirisweapons:diamond_katana"
+    },
+    "/": {
+      "item": "almirisweapons:small_stick"
+    }
+  },
   "result": {
     "item": "almirisweapons:diamond_odachi"
   }

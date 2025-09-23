@@ -1,18 +1,18 @@
 {
-  "parent": "minecraft:item/handheld",
-  "loader": "forge:separate_transforms",
-  "base": {
-    "parent": "almirisweapons:item/blunderbuss_3d"
-  },
-  "perspectives": {
-    "gui": {
-      "parent": "almirisweapons:item/2d/blunderbuss"
+  "parent": "forge:composite",
+  "base": "almirisweapons:item/blunderbuss_3d",
+  "overlays": [
+    {
+      "texture": "almirisweapons:item/2d/blunderbuss",
+      "transform": "gui"
     },
-    "ground": {
-      "parent": "almirisweapons:item/2d/blunderbuss"
+    {
+      "texture": "almirisweapons:item/2d/blunderbuss",
+      "transform": "ground"
     },
-    "fixed": {
-      "parent": "almirisweapons:item/2d/blunderbuss"
+    {
+      "texture": "almirisweapons:item/2d/blunderbuss",
+      "transform": "fixed"
     }
-  }
+  ]
 }

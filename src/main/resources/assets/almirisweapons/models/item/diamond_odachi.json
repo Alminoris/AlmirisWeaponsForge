@@ -1,18 +1,18 @@
 {
-  "parent": "minecraft:item/handheld",
-  "loader": "forge:separate_transforms",
-  "base": {
-    "parent": "almirisweapons:item/diamond_odachi_3d"
-  },
-  "perspectives": {
-    "gui": {
-      "parent": "almirisweapons:item/2d/diamond_odachi"
+  "parent": "forge:composite",
+  "base": "almirisweapons:item/diamond_odachi_3d",
+  "overlays": [
+    {
+      "texture": "almirisweapons:item/2d/diamond_odachi",
+      "transform": "gui"
     },
-    "ground": {
-      "parent": "almirisweapons:item/2d/diamond_odachi"
+    {
+      "texture": "almirisweapons:item/2d/diamond_odachi",
+      "transform": "ground"
     },
-    "fixed": {
-      "parent": "almirisweapons:item/2d/diamond_odachi"
+    {
+      "texture": "almirisweapons:item/2d/diamond_odachi",
+      "transform": "fixed"
     }
-  }
+  ]
 }

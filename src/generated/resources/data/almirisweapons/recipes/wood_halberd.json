@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "almirisweapons:wood_axe_tip"
-    },
-    "*": {
-      "item": "almirisweapons:wood_stabbing_tip"
-    },
-    "/": {
-      "item": "minecraft:stick"
-    }
-  },
   "pattern": [
     " #*",
     " / ",
     "/  "
   ],
+  "key": {
+    "*": {
+      "item": "almirisweapons:wood_stabbing_tip"
+    },
+    "#": {
+      "item": "almirisweapons:wood_axe_tip"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
   "result": {
     "item": "almirisweapons:wood_halberd"
   }

@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "key": {
-    "/": {
-      "item": "minecraft:netherite_ingot"
-    }
-  },
   "pattern": [
     " /",
     "/ ",
     " /"
   ],
+  "key": {
+    "/": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
   "result": {
-    "count": 3,
-    "item": "almirisweapons:netherite_curved_blade"
+    "item": "almirisweapons:netherite_curved_blade",
+    "count": 3
   }
 }

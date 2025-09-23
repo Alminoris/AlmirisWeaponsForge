@@ -1,31 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "almirisweapons:diamond_halberd"
+    ]
+  },
   "criteria": {
-    "has_diamond_axe_tip": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "almirisweapons:diamond_axe_tip"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_diamond_stabbing_tip": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "almirisweapons:diamond_stabbing_tip"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
     "has_stick": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
@@ -34,14 +16,37 @@
             ]
           }
         ]
-      },
-      "trigger": "minecraft:inventory_changed"
+      }
+    },
+    "has_diamond_stabbing_tip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:diamond_stabbing_tip"
+            ]
+          }
+        ]
+      }
+    },
+    "has_diamond_axe_tip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "almirisweapons:diamond_axe_tip"
+            ]
+          }
+        ]
+      }
     },
     "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
       "conditions": {
         "recipe": "almirisweapons:diamond_halberd"
-      },
-      "trigger": "minecraft:recipe_unlocked"
+      }
     }
   },
   "requirements": [
@@ -51,10 +56,5 @@
       "has_diamond_axe_tip",
       "has_the_recipe"
     ]
-  ],
-  "rewards": {
-    "recipes": [
-      "almirisweapons:diamond_halberd"
-    ]
-  }
+  ]
 }
