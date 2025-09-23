@@ -9,6 +9,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -75,12 +76,23 @@ public class BulletEntity extends AbstractArrow
     }
 
     @Override
-    protected void onHitBlock(@NotNull BlockHitResult blockHitResult)
+    protected void onHitBlock(BlockHitResult blockHitResult)
     {
         super.onHitBlock(blockHitResult);
 
-        int count = this.random.nextIntBetweenInclusive(0, 2);
-        setPickupItemStack(new ItemStack(Items.IRON_NUGGET, count));
+        if (!this.level().isClientSide) {
+            int count = this.random.nextIntBetweenInclusive(0, 2); // 0–2
+            if (count > 0) {
+                ItemEntity drop = new ItemEntity(
+                        this.level(),
+                        this.getX(),
+                        this.getY(),
+                        this.getZ(),
+                        new ItemStack(Items.IRON_NUGGET, count)
+                );
+                this.level().addFreshEntity(drop);
+            }
+        }
     }
 
     @Override
