@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "equipment",
   "key": {
     "#": {
       "item": "almirisweapons:stone_axe_tip"
@@ -16,6 +15,5 @@
   ],
   "result": {
     "item": "almirisweapons:stone_dane_axe"
-  },
-  "show_notification": true
+  }
 }

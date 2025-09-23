@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "equipment",
   "key": {
     "#": {
       "item": "almirisweapons:stone_singleedge_blade"
@@ -16,6 +15,5 @@
   ],
   "result": {
     "item": "almirisweapons:stone_katana"
-  },
-  "show_notification": true
+  }
 }

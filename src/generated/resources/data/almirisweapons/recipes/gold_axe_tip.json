@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "/": {
       "item": "minecraft:gold_ingot"
@@ -14,6 +13,5 @@
   "result": {
     "count": 3,
     "item": "almirisweapons:gold_axe_tip"
-  },
-  "show_notification": true
+  }
 }

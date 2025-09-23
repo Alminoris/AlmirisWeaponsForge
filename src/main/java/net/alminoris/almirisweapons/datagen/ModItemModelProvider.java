@@ -2,7 +2,7 @@ package net.alminoris.almirisweapons.datagen;
 
 import net.alminoris.almirisweapons.AlmirisWeapons;
 import net.alminoris.almirisweapons.item.ModItems;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
@@ -14,9 +14,9 @@ import static net.alminoris.almirisweapons.util.helper.WeaponSetsHelper.MATERIAL
 
 public class ModItemModelProvider extends ItemModelProvider
 {
-    public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper)
+    public ModItemModelProvider(DataGenerator generator, String modid, ExistingFileHelper existingFileHelper)
     {
-        super(output, AlmirisWeapons.MOD_ID, existingFileHelper);
+        super(generator, modid, existingFileHelper);
     }
 
     @Override

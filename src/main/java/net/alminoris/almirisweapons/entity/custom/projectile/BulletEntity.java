@@ -7,6 +7,8 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.IndirectEntityDamageSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -51,8 +53,8 @@ public class BulletEntity extends AbstractArrow
     @Override
     public void tick() {
         super.tick();
-        if (this.getCommandSenderWorld().isClientSide && !this.inGround) {
-            this.getCommandSenderWorld().addParticle(
+        if (this.getLevel().isClientSide && !this.inGround) {
+            this.getLevel().addParticle(
                     ParticleTypes.SMOKE,
                     this.getX(), this.getY(), this.getZ(),
                     0.0, 0.0, 0.0
@@ -64,11 +66,16 @@ public class BulletEntity extends AbstractArrow
     protected void onHitEntity(@NotNull EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
 
-        if (!this.getCommandSenderWorld().isClientSide) {
+        if (!this.getLevel().isClientSide) {
             if (entityHitResult.getEntity() instanceof LivingEntity target) {
-                DamageSource source = this.getCommandSenderWorld()
-                        .damageSources()
-                        .arrow(this, this.getOwner() instanceof LivingEntity shooter ? shooter : null);
+                Entity owner = this.getOwner();
+                DamageSource source;
+
+                if (owner instanceof LivingEntity shooter) {
+                    source = new IndirectEntityDamageSource("bullet", this, shooter).setProjectile();
+                } else {
+                    source = new IndirectEntityDamageSource("bullet", this, this).setProjectile();
+                }
 
                 target.hurt(source, (float) this.damage);
                 this.discard();

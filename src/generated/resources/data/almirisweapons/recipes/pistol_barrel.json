@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "#": {
       "item": "minecraft:iron_ingot"
@@ -18,6 +17,5 @@
   ],
   "result": {
     "item": "almirisweapons:pistol_barrel"
-  },
-  "show_notification": true
+  }
 }

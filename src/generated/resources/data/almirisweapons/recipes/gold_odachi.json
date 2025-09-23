@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "equipment",
   "key": {
     "#": {
       "item": "almirisweapons:gold_katana"
@@ -19,6 +18,5 @@
   ],
   "result": {
     "item": "almirisweapons:gold_odachi"
-  },
-  "show_notification": true
+  }
 }

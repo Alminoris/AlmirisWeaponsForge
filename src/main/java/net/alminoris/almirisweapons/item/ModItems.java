@@ -47,19 +47,19 @@ public class ModItems {
     public static final Dictionary<String, RegistryObject<Item>> CURVED_BLADES = new Hashtable<>();
 
     public static final RegistryObject<Item> ARQUEBUS_BARREL =
-            registerItem("arquebus_barrel", () -> new Item(new Item.Properties()));
+            registerItem("arquebus_barrel", () -> new Item(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB)));
     public static final RegistryObject<Item> BLUNDERBUSS_BARREL =
-            registerItem("blunderbuss_barrel", () -> new Item(new Item.Properties()));
+            registerItem("blunderbuss_barrel", () -> new Item(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB)));
     public static final RegistryObject<Item> PISTOL_BARREL =
-            registerItem("pistol_barrel", () -> new Item(new Item.Properties()));
+            registerItem("pistol_barrel", () -> new Item(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB)));
     public static final RegistryObject<Item> MATCHLOCK_MECHANISM =
-            registerItem("matchlock_mechanism", () -> new Item(new Item.Properties()));
+            registerItem("matchlock_mechanism", () -> new Item(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB)));
     public static final RegistryObject<Item> GUN_STOCK =
-            registerItem("gun_stock", () -> new Item(new Item.Properties()));
+            registerItem("gun_stock", () -> new Item(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB)));
     public static final RegistryObject<Item> SMALL_STICK =
-            registerItem("small_stick", () -> new Item(new Item.Properties()));
+            registerItem("small_stick", () -> new Item(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB)));
     public static final RegistryObject<Item> BULLET =
-            registerItem("bullet", () -> new Item(new Item.Properties()));
+            registerItem("bullet", () -> new Item(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB)));
 
     public static final Dictionary<String, Item> MATERIAL_ITEMS = new Hashtable<>();
 
@@ -70,62 +70,62 @@ public class ModItems {
         MATERIAL_ITEMS.put("netherite", Items.NETHERITE_INGOT);
 
         for (String name : WeaponSetsHelper.MATERIALS) {
-            STABBING_TIPS.put(name, registerItem(name + "_stabbing_tip", () -> new Item(new Item.Properties())));
-            MACE_TIPS.put(name, registerItem(name + "_mace_tip", () -> new Item(new Item.Properties())));
-            AXE_TIPS.put(name, registerItem(name + "_axe_tip", () -> new Item(new Item.Properties())));
-            DOUBLEEDGE_BLADES.put(name, registerItem(name + "_doubleedge_blade", () -> new Item(new Item.Properties())));
-            SINGLEEDGE_BLADES.put(name, registerItem(name + "_singleedge_blade", () -> new Item(new Item.Properties())));
-            CURVED_BLADES.put(name, registerItem(name + "_curved_blade", () -> new Item(new Item.Properties())));
+            STABBING_TIPS.put(name, registerItem(name + "_stabbing_tip", () -> new Item(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
+            MACE_TIPS.put(name, registerItem(name + "_mace_tip", () -> new Item(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
+            AXE_TIPS.put(name, registerItem(name + "_axe_tip", () -> new Item(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
+            DOUBLEEDGE_BLADES.put(name, registerItem(name + "_doubleedge_blade", () -> new Item(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
+            SINGLEEDGE_BLADES.put(name, registerItem(name + "_singleedge_blade", () -> new Item(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
+            CURVED_BLADES.put(name, registerItem(name + "_curved_blade", () -> new Item(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             HALBERDS.put(name, registerItem(name + "_halberd",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), 3, -3.0F, new Item.Properties())));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 3, -3.0F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             RAPIERS.put(name, registerItem(name + "_rapier",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), 1, -2.0F, new Item.Properties())));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 1, -2.0F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             CLAYMORES.put(name, registerItem(name + "_claymore",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), 4, -3.0F, new Item.Properties())));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 4, -3.0F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             BATTLE_AXES.put(name, registerItem(name + "_battle_axe",
-                    () -> new AxeItem(TOOL_MATERIALS.get(name), 6.0F, -3.1F, new Item.Properties())));
+                    () -> new AxeItem(TOOL_MATERIALS.get(name), 6.0F, -3.1F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             SAI.put(name, registerItem(name + "_sai",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), 0, -1.5F, new Item.Properties())));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 0, -1.5F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             MACES.put(name, registerItem(name + "_mace",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), 5, -3.5F, new Item.Properties())));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 5, -3.5F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             DAGGERS.put(name, registerItem(name + "_dagger",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), 1, -1.75F, new Item.Properties())));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 1, -1.75F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             GLAIVES.put(name, registerItem(name + "_glaive",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), 3, -2.5F, new Item.Properties())));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 3, -2.5F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             KATANAS.put(name, registerItem(name + "_katana",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), 4, -2.25F, new Item.Properties())));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 4, -2.25F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             BATTLE_STAVES.put(name, registerItem(name + "_battle_staff",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), 4, -2.7F, new Item.Properties())));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 4, -2.7F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             SCYTHES.put(name, registerItem(name + "_scythe",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), 4, -2.6F, new Item.Properties())));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 4, -2.6F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             ODACHIS.put(name, registerItem(name + "_odachi",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), 5, -3.25F, new Item.Properties())));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 5, -3.25F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             DANE_AXES.put(name, registerItem(name + "_dane_axe",
-                    () -> new AxeItem(TOOL_MATERIALS.get(name), 7.0F, -3.2F, new Item.Properties())));
+                    () -> new AxeItem(TOOL_MATERIALS.get(name), 7.0F, -3.2F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             BEARDED_AXES.put(name, registerItem(name + "_bearded_axe",
-                    () -> new AxeItem(TOOL_MATERIALS.get(name), 5.0F, -2.8F, new Item.Properties())));
+                    () -> new AxeItem(TOOL_MATERIALS.get(name), 5.0F, -2.8F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
 
             KATARS.put(name, registerItem(name + "_katar",
-                    () -> new SwordItem(TOOL_MATERIALS.get(name), 2, -2.0F, new Item.Properties())));
+                    () -> new SwordItem(TOOL_MATERIALS.get(name), 2, -2.0F, new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB))));
         }
     }
 
     public static final RegistryObject<Item> ARQUEBUS =
-            registerItem("arquebus", () -> new ArquebusItem(new Item.Properties().stacksTo(1),
+            registerItem("arquebus", () -> new ArquebusItem(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB).stacksTo(1),
                     new FirearmConfig.Builder()
                             .useAction(UseAnim.BOW)
                             .maxUseTime(72000)
@@ -159,7 +159,7 @@ public class ModItems {
             ));
 
     public static final RegistryObject<Item> BLUNDERBUSS =
-            registerItem("blunderbuss", () -> new BlunderbussItem(new Item.Properties().stacksTo(1),
+            registerItem("blunderbuss", () -> new BlunderbussItem(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB).stacksTo(1),
                     new FirearmConfig.Builder()
                             .useAction(UseAnim.BOW)
                             .maxUseTime(72000)
@@ -193,7 +193,7 @@ public class ModItems {
             ));
 
     public static final RegistryObject<Item> MATCHLOCK_PISTOL =
-            registerItem("matchlock_pistol", () -> new MatchlockPistolItem(new Item.Properties().stacksTo(1),
+            registerItem("matchlock_pistol", () -> new MatchlockPistolItem(new Item.Properties().tab(ModItemGroups.ALMIRISWEAPONS_TAB).stacksTo(1),
                     new FirearmConfig.Builder()
                             .useAction(UseAnim.SPYGLASS)
                             .maxUseTime(72000)

@@ -23,9 +23,10 @@ public class ModSounds {
     public static final RegistryObject<SoundEvent> MATCHLOCK_PISTOL_RELOAD = registerSound("matchlock_pistol_reload");
     public static final RegistryObject<SoundEvent> EMPTY = registerSound("empty");
 
-    private static RegistryObject<SoundEvent> registerSound(String name) {
-        return SOUND_EVENTS.register(name,
-                () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(AlmirisWeapons.MOD_ID, name)));
+    private static RegistryObject<SoundEvent> registerSound(String name)
+    {
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(AlmirisWeapons.MOD_ID, name);
+        return SOUND_EVENTS.register(name, () -> new SoundEvent(id));
     }
 
     public static void register(IEventBus eventBus)

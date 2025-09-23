@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "/": {
       "item": "almirisweapons:gold_singleedge_blade"
@@ -11,6 +10,5 @@
   ],
   "result": {
     "item": "almirisweapons:gold_doubleedge_blade"
-  },
-  "show_notification": true
+  }
 }

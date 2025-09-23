@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "equipment",
   "key": {
     "#": {
       "item": "almirisweapons:netherite_axe_tip"
@@ -15,6 +14,5 @@
   ],
   "result": {
     "item": "almirisweapons:netherite_battle_axe"
-  },
-  "show_notification": true
+  }
 }

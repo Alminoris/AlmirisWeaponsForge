@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "equipment",
   "key": {
     "B": {
       "item": "almirisweapons:pistol_barrel"
@@ -19,6 +18,5 @@
   ],
   "result": {
     "item": "almirisweapons:matchlock_pistol"
-  },
-  "show_notification": true
+  }
 }

@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "equipment",
   "key": {
     "#": {
       "item": "minecraft:netherite_ingot"
@@ -16,6 +15,5 @@
   ],
   "result": {
     "item": "almirisweapons:netherite_battle_staff"
-  },
-  "show_notification": true
+  }
 }

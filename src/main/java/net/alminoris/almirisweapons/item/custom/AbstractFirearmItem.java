@@ -113,12 +113,10 @@ public abstract class AbstractFirearmItem extends Item
                 sound, player.getSoundSource(), volume, pitch);
     }
 
-
-
     @Override
-    public void onStopUsing(ItemStack stack, LivingEntity user, int count)
+    public void releaseUsing(ItemStack stack, Level world, LivingEntity user, int count)
     {
-        if (!(user instanceof Player player) || user.getCommandSenderWorld().isClientSide) return;
+        if (!(user instanceof Player player) || world.isClientSide) return;
 
         UUID uuid = player.getUUID();
         int usedTicks = getPullTicks().getOrDefault(uuid, 0);
@@ -126,7 +124,7 @@ public abstract class AbstractFirearmItem extends Item
 
         if (usedTicks >= getConfig().minUseTicks())
         {
-            fire(user.getCommandSenderWorld(), player, stack, player.getUsedItemHand());
+            fire(world, player, stack, player.getUsedItemHand());
         }
     }
 

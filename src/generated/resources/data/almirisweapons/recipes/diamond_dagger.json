@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "equipment",
   "key": {
     "#": {
       "item": "almirisweapons:diamond_curved_blade"
@@ -15,6 +14,5 @@
   ],
   "result": {
     "item": "almirisweapons:diamond_dagger"
-  },
-  "show_notification": true
+  }
 }

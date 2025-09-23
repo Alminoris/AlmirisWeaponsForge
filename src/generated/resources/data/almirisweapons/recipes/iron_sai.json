@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "equipment",
   "key": {
     "#": {
       "item": "almirisweapons:iron_stabbing_tip"
@@ -15,6 +14,5 @@
   ],
   "result": {
     "item": "almirisweapons:iron_sai"
-  },
-  "show_notification": true
+  }
 }

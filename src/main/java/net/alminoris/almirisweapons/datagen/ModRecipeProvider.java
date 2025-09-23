@@ -1,7 +1,7 @@
 package net.alminoris.almirisweapons.datagen;
 
 import net.alminoris.almirisweapons.item.ModItems;
-import net.minecraft.data.PackOutput;
+import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
@@ -16,15 +16,15 @@ import static net.alminoris.almirisweapons.util.helper.WeaponSetsHelper.MATERIAL
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder
 {
-    public ModRecipeProvider(PackOutput pOutput)
+    public ModRecipeProvider(DataGenerator p_125973_) 
     {
-        super(pOutput);
+        super(p_125973_);
     }
 
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> recipeOutput)
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> recipeOutput)
     {
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BATTLE_STAVES.get("wood").get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.BATTLE_STAVES.get("wood").get(), 1)
                 .pattern("  #")
                 .pattern(" / ")
                 .pattern("#  ")
@@ -33,7 +33,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BATTLE_STAVES.get("stone").get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.BATTLE_STAVES.get("stone").get(), 1)
                 .pattern("  #")
                 .pattern(" / ")
                 .pattern("#  ")
@@ -42,7 +42,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BATTLE_STAVES.get("iron").get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.BATTLE_STAVES.get("iron").get(), 1)
                 .pattern("  #")
                 .pattern(" / ")
                 .pattern("#  ")
@@ -52,7 +52,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BATTLE_STAVES.get("gold").get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.BATTLE_STAVES.get("gold").get(), 1)
                 .pattern("  #")
                 .pattern(" / ")
                 .pattern("#  ")
@@ -62,7 +62,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BATTLE_STAVES.get("diamond").get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.BATTLE_STAVES.get("diamond").get(), 1)
                 .pattern("  #")
                 .pattern(" / ")
                 .pattern("#  ")
@@ -72,7 +72,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BATTLE_STAVES.get("netherite").get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.BATTLE_STAVES.get("netherite").get(), 1)
                 .pattern("  #")
                 .pattern(" / ")
                 .pattern("#  ")
@@ -82,7 +82,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(recipeOutput);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.SMALL_STICK.get(), 2)
+        ShapelessRecipeBuilder.shapeless(ModItems.SMALL_STICK.get(), 2)
                 .requires(Items.STICK)
                 .group("small_stick")
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
@@ -93,7 +93,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             throw new IllegalStateException("wood_stabbing_tip is not registered properly!");
         }
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STABBING_TIPS.get("wood").get(), 3)
+        ShapedRecipeBuilder.shaped(ModItems.STABBING_TIPS.get("wood").get(), 3)
                 .pattern("/")
                 .pattern("/")
                 .pattern("/")
@@ -101,7 +101,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.AXE_TIPS.get("wood").get(), 3)
+        ShapedRecipeBuilder.shaped(ModItems.AXE_TIPS.get("wood").get(), 3)
                 .pattern("/  ")
                 .pattern("///")
                 .pattern("/  ")
@@ -109,7 +109,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MACE_TIPS.get("wood").get(), 3)
+        ShapedRecipeBuilder.shaped(ModItems.MACE_TIPS.get("wood").get(), 3)
                 .pattern(" / ")
                 .pattern("///")
                 .pattern(" / ")
@@ -117,7 +117,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SINGLEEDGE_BLADES.get("wood").get(), 3)
+        ShapedRecipeBuilder.shaped(ModItems.SINGLEEDGE_BLADES.get("wood").get(), 3)
                 .pattern("  /")
                 .pattern(" / ")
                 .pattern("/  ")
@@ -125,7 +125,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CURVED_BLADES.get("wood").get(), 3)
+        ShapedRecipeBuilder.shaped(ModItems.CURVED_BLADES.get("wood").get(), 3)
                 .pattern(" /")
                 .pattern("/ ")
                 .pattern(" /")
@@ -133,7 +133,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STABBING_TIPS.get("stone").get(), 3)
+        ShapedRecipeBuilder.shaped(ModItems.STABBING_TIPS.get("stone").get(), 3)
                 .pattern("/")
                 .pattern("/")
                 .pattern("/")
@@ -141,7 +141,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.AXE_TIPS.get("stone").get(), 3)
+        ShapedRecipeBuilder.shaped(ModItems.AXE_TIPS.get("stone").get(), 3)
                 .pattern("/  ")
                 .pattern("///")
                 .pattern("/  ")
@@ -149,7 +149,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MACE_TIPS.get("stone").get(), 3)
+        ShapedRecipeBuilder.shaped(ModItems.MACE_TIPS.get("stone").get(), 3)
                 .pattern(" / ")
                 .pattern("///")
                 .pattern(" / ")
@@ -157,7 +157,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SINGLEEDGE_BLADES.get("stone").get(), 3)
+        ShapedRecipeBuilder.shaped(ModItems.SINGLEEDGE_BLADES.get("stone").get(), 3)
                 .pattern("  /")
                 .pattern(" / ")
                 .pattern("/  ")
@@ -165,7 +165,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CURVED_BLADES.get("stone").get(), 3)
+        ShapedRecipeBuilder.shaped(ModItems.CURVED_BLADES.get("stone").get(), 3)
                 .pattern(" /")
                 .pattern("/ ")
                 .pattern(" /")
@@ -173,7 +173,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.COBBLESTONE), has(Items.COBBLESTONE))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PISTOL_BARREL.get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.PISTOL_BARREL.get(), 1)
                 .pattern("  #")
                 .pattern("*/ ")
                 .define('#', Items.IRON_INGOT)
@@ -184,7 +184,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.SMALL_STICK.get()), has(ModItems.SMALL_STICK.get()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLUNDERBUSS_BARREL.get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.BLUNDERBUSS_BARREL.get(), 1)
                 .pattern("  #")
                 .pattern("*# ")
                 .pattern("*  ")
@@ -194,7 +194,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ARQUEBUS_BARREL.get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.ARQUEBUS_BARREL.get(), 1)
                 .pattern("  #")
                 .pattern("*/ ")
                 .pattern("#  ")
@@ -206,7 +206,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MATCHLOCK_MECHANISM.get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.MATCHLOCK_MECHANISM.get(), 1)
                 .pattern("*  ")
                 .pattern("***")
                 .pattern("* *")
@@ -214,7 +214,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GUN_STOCK.get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.GUN_STOCK.get(), 1)
                 .pattern(" #*")
                 .pattern("#* ")
                 .pattern("#  ")
@@ -224,7 +224,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.SMALL_STICK.get()), has(ModItems.SMALL_STICK.get()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BULLET.get(), 2)
+        ShapedRecipeBuilder.shaped(ModItems.BULLET.get(), 2)
                 .pattern(" * ")
                 .pattern("*#*")
                 .pattern(" * ")
@@ -238,7 +238,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         {
             if (!name.equals("wood") && !name.equals("stone"))
             {
-                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STABBING_TIPS.get(name).get(), 3)
+                ShapedRecipeBuilder.shaped(ModItems.STABBING_TIPS.get(name).get(), 3)
                         .pattern("/")
                         .pattern("/")
                         .pattern("/")
@@ -246,7 +246,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .unlockedBy(getHasName(ModItems.MATERIAL_ITEMS.get(name)), has(ModItems.MATERIAL_ITEMS.get(name)))
                         .save(recipeOutput);
 
-                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.AXE_TIPS.get(name).get(), 3)
+                ShapedRecipeBuilder.shaped(ModItems.AXE_TIPS.get(name).get(), 3)
                         .pattern("/  ")
                         .pattern("///")
                         .pattern("/  ")
@@ -254,7 +254,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .unlockedBy(getHasName(ModItems.MATERIAL_ITEMS.get(name)), has(ModItems.MATERIAL_ITEMS.get(name)))
                         .save(recipeOutput);
 
-                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MACE_TIPS.get(name).get(), 3)
+                ShapedRecipeBuilder.shaped(ModItems.MACE_TIPS.get(name).get(), 3)
                         .pattern(" / ")
                         .pattern("///")
                         .pattern(" / ")
@@ -262,7 +262,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .unlockedBy(getHasName(ModItems.MATERIAL_ITEMS.get(name)), has(ModItems.MATERIAL_ITEMS.get(name)))
                         .save(recipeOutput);
 
-                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.SINGLEEDGE_BLADES.get(name).get(), 3)
+                ShapedRecipeBuilder.shaped(ModItems.SINGLEEDGE_BLADES.get(name).get(), 3)
                         .pattern("  /")
                         .pattern(" / ")
                         .pattern("/  ")
@@ -270,7 +270,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .unlockedBy(getHasName(ModItems.MATERIAL_ITEMS.get(name)), has(ModItems.MATERIAL_ITEMS.get(name)))
                         .save(recipeOutput);
 
-                ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CURVED_BLADES.get(name).get(), 3)
+                ShapedRecipeBuilder.shaped(ModItems.CURVED_BLADES.get(name).get(), 3)
                         .pattern(" /")
                         .pattern("/ ")
                         .pattern(" /")
@@ -279,13 +279,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .save(recipeOutput);
             }
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.DOUBLEEDGE_BLADES.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.DOUBLEEDGE_BLADES.get(name).get(), 1)
                     .pattern("//")
                     .define('/', ModItems.SINGLEEDGE_BLADES.get(name).get())
                     .unlockedBy(getHasName(ModItems.SINGLEEDGE_BLADES.get(name).get()), has(ModItems.SINGLEEDGE_BLADES.get(name).get()))
                     .save(recipeOutput);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.HALBERDS.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.HALBERDS.get(name).get(), 1)
                     .pattern(" #*")
                     .pattern(" / ")
                     .pattern("/  ")
@@ -297,7 +297,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.AXE_TIPS.get(name).get()), has(ModItems.AXE_TIPS.get(name).get()))
                     .save(recipeOutput);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.GLAIVES.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.GLAIVES.get(name).get(), 1)
                     .pattern("  #")
                     .pattern(" / ")
                     .pattern("/  ")
@@ -307,7 +307,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.SINGLEEDGE_BLADES.get(name).get()), has(ModItems.SINGLEEDGE_BLADES.get(name).get()))
                     .save(recipeOutput);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SCYTHES.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.SCYTHES.get(name).get(), 1)
                     .pattern("###")
                     .pattern(" / ")
                     .pattern("/  ")
@@ -317,7 +317,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.CURVED_BLADES.get(name).get()), has(ModItems.CURVED_BLADES.get(name).get()))
                     .save(recipeOutput);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.RAPIERS.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.RAPIERS.get(name).get(), 1)
                     .pattern("  #")
                     .pattern(" # ")
                     .pattern("/  ")
@@ -327,7 +327,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.SMALL_STICK.get()), has(ModItems.SMALL_STICK.get()))
                     .save(recipeOutput);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.KATANAS.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.KATANAS.get(name).get(), 1)
                     .pattern("#  ")
                     .pattern(" # ")
                     .pattern("  /")
@@ -337,7 +337,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.SMALL_STICK.get()), has(ModItems.SMALL_STICK.get()))
                     .save(recipeOutput);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BATTLE_AXES.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.BATTLE_AXES.get(name).get(), 1)
                     .pattern("#/#")
                     .pattern(" / ")
                     .define('#', ModItems.AXE_TIPS.get(name).get())
@@ -346,7 +346,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.SMALL_STICK.get()), has(ModItems.SMALL_STICK.get()))
                     .save(recipeOutput);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.KATARS.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.KATARS.get(name).get(), 1)
                     .pattern(" # ")
                     .pattern("/#/")
                     .pattern("/ /")
@@ -356,7 +356,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.SMALL_STICK.get()), has(ModItems.SMALL_STICK.get()))
                     .save(recipeOutput);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.DANE_AXES.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.DANE_AXES.get(name).get(), 1)
                     .pattern("## ")
                     .pattern("##/")
                     .pattern("  /")
@@ -366,7 +366,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
                     .save(recipeOutput);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BEARDED_AXES.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.BEARDED_AXES.get(name).get(), 1)
                     .pattern("## ")
                     .pattern("# /")
                     .pattern("  /")
@@ -376,7 +376,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.SMALL_STICK.get()), has(ModItems.SMALL_STICK.get()))
                     .save(recipeOutput);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.SAI.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.SAI.get(name).get(), 1)
                     .pattern("##")
                     .pattern("/#")
                     .define('#', ModItems.STABBING_TIPS.get(name).get())
@@ -385,7 +385,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.SMALL_STICK.get()), has(ModItems.SMALL_STICK.get()))
                     .save(recipeOutput);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.DAGGERS.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.DAGGERS.get(name).get(), 1)
                     .pattern(" #")
                     .pattern("/ ")
                     .define('#', ModItems.CURVED_BLADES.get(name).get())
@@ -394,7 +394,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.SMALL_STICK.get()), has(ModItems.SMALL_STICK.get()))
                     .save(recipeOutput);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ODACHIS.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.ODACHIS.get(name).get(), 1)
                     .pattern("*  ")
                     .pattern(" # ")
                     .pattern("  /")
@@ -406,7 +406,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .unlockedBy(getHasName(ModItems.SMALL_STICK.get()), has(ModItems.SMALL_STICK.get()))
                     .save(recipeOutput);
 
-            ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MACES.get(name).get(), 1)
+            ShapedRecipeBuilder.shaped(ModItems.MACES.get(name).get(), 1)
                     .pattern(" #")
                     .pattern("/ ")
                     .define('#', ModItems.MACE_TIPS.get(name).get())
@@ -416,7 +416,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     .save(recipeOutput);
         }
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.ARQUEBUS.get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.ARQUEBUS.get(), 1)
                 .pattern("BL ")
                 .pattern(" S ")
                 .define('B', ModItems.ARQUEBUS_BARREL.get())
@@ -427,7 +427,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.GUN_STOCK.get()), has(ModItems.GUN_STOCK.get()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.BLUNDERBUSS.get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.BLUNDERBUSS.get(), 1)
                 .pattern("B ")
                 .pattern("L ")
                 .pattern("S ")
@@ -439,7 +439,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.GUN_STOCK.get()), has(ModItems.GUN_STOCK.get()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.MATCHLOCK_PISTOL.get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.MATCHLOCK_PISTOL.get(), 1)
                 .pattern("B ")
                 .pattern("L ")
                 .pattern("S ")
@@ -452,7 +452,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput);
 
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.CLAYMORES.get("wood").get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.CLAYMORES.get("wood").get(), 1)
                 .pattern(" # ")
                 .pattern("/  ")
                 .define('/', Items.WOODEN_SWORD)
@@ -461,7 +461,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.DOUBLEEDGE_BLADES.get("wood").get()), has(ModItems.DOUBLEEDGE_BLADES.get("wood").get()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.CLAYMORES.get("stone").get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.CLAYMORES.get("stone").get(), 1)
                 .pattern(" #")
                 .pattern("/ ")
                 .define('/', Items.STONE_SWORD)
@@ -470,7 +470,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.DOUBLEEDGE_BLADES.get("stone").get()), has(ModItems.DOUBLEEDGE_BLADES.get("stone").get()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.CLAYMORES.get("iron").get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.CLAYMORES.get("iron").get(), 1)
                 .pattern(" #")
                 .pattern("/ ")
                 .define('/', Items.IRON_SWORD)
@@ -479,7 +479,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.DOUBLEEDGE_BLADES.get("iron").get()), has(ModItems.DOUBLEEDGE_BLADES.get("iron").get()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.CLAYMORES.get("gold").get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.CLAYMORES.get("gold").get(), 1)
                 .pattern(" #")
                 .pattern("/ ")
                 .define('/', Items.GOLDEN_SWORD)
@@ -488,7 +488,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.DOUBLEEDGE_BLADES.get("gold").get()), has(ModItems.DOUBLEEDGE_BLADES.get("gold").get()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.CLAYMORES.get("diamond").get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.CLAYMORES.get("diamond").get(), 1)
                 .pattern(" #")
                 .pattern("/ ")
                 .define('/', Items.DIAMOND_SWORD)
@@ -497,7 +497,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.DOUBLEEDGE_BLADES.get("diamond").get()), has(ModItems.DOUBLEEDGE_BLADES.get("diamond").get()))
                 .save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, ModItems.CLAYMORES.get("netherite").get(), 1)
+        ShapedRecipeBuilder.shaped(ModItems.CLAYMORES.get("netherite").get(), 1)
                 .pattern(" #")
                 .pattern("/ ")
                 .define('/', Items.NETHERITE_SWORD)
@@ -509,7 +509,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     private static void planksFromLog(Consumer<FinishedRecipe> recipeOutput, ItemLike output, ItemLike define)
     {
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, output, 4)
+        ShapelessRecipeBuilder.shapeless(output, 4)
                 .requires(define)
                 .group("planks")
                 .unlockedBy("has_log", has(define))

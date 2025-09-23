@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "/": {
       "item": "minecraft:diamond"
@@ -14,6 +13,5 @@
   "result": {
     "count": 3,
     "item": "almirisweapons:diamond_singleedge_blade"
-  },
-  "show_notification": true
+  }
 }

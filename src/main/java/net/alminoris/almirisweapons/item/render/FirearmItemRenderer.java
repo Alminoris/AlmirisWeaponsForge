@@ -1,21 +1,22 @@
 package net.alminoris.almirisweapons.item.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Axis;
 import net.alminoris.almirisweapons.item.custom.AbstractFirearmItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.block.model.ItemTransforms;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+
+import static com.mojang.math.Vector3f.XP;
 
 public class FirearmItemRenderer extends BlockEntityWithoutLevelRenderer {
 
@@ -37,7 +38,7 @@ public class FirearmItemRenderer extends BlockEntityWithoutLevelRenderer {
     }
 
     @Override
-    public void renderByItem(ItemStack stack, ItemDisplayContext displayContext,
+    public void renderByItem(ItemStack stack, ItemTransforms.TransformType displayContext,
                              PoseStack poseStack, MultiBufferSource buffer,
                              int packedLight, int packedOverlay) {
 
@@ -59,13 +60,13 @@ public class FirearmItemRenderer extends BlockEntityWithoutLevelRenderer {
 
                 if (id.contains("arquebus")) {
                     poseStack.translate(0, 0, -recoilOffset * 1.2f);
-                    poseStack.mulPose(Axis.XP.rotationDegrees(-recoilOffset * 15f));
+                    poseStack.mulPose(XP.rotationDegrees(-recoilOffset * 15f));
                 } else if (id.contains("blunderbuss")) {
                     poseStack.translate((random.nextFloat() - 0.5f) * 0.05f, 0, -recoilOffset * 1.5f);
-                    poseStack.mulPose(Axis.XP.rotationDegrees(-recoilOffset * 20f));
+                    poseStack.mulPose(XP.rotationDegrees(-recoilOffset * 20f));
                 } else if (id.contains("pistol")) {
                     poseStack.translate(0, 0, -recoilOffset * 0.6f);
-                    poseStack.mulPose(Axis.XP.rotationDegrees(-recoilOffset * 5f));
+                    poseStack.mulPose(XP.rotationDegrees(-recoilOffset * 5f));
                 }
             }
 
@@ -77,7 +78,7 @@ public class FirearmItemRenderer extends BlockEntityWithoutLevelRenderer {
         if (reloadTicks > 0) {
             float progress = 1.0f - (reloadTicks / (float) maxReloadTicks);
             poseStack.translate(0, progress * -0.4f, progress * 0.2f);
-            poseStack.mulPose(Axis.XP.rotationDegrees(progress * 25.0f));
+            poseStack.mulPose(XP.rotationDegrees(progress * 25.0f));
             reloadTicks--;
             reloadMap.computeIfAbsent(playerId, k -> new HashMap<>()).put(hand, reloadTicks);
         }

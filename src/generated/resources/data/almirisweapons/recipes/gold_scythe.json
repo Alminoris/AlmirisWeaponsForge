@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "equipment",
   "key": {
     "#": {
       "item": "almirisweapons:gold_curved_blade"
@@ -16,6 +15,5 @@
   ],
   "result": {
     "item": "almirisweapons:gold_scythe"
-  },
-  "show_notification": true
+  }
 }
