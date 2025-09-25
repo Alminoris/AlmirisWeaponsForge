@@ -1,18 +1,34 @@
 {
-  "parent": "forge:composite",
-  "base": "almirisweapons:item/arquebus_3d",
-  "overlays": [
-    {
-      "texture": "almirisweapons:item/2d/arquebus",
-      "transform": "gui"
-    },
-    {
-      "texture": "almirisweapons:item/2d/arquebus",
-      "transform": "ground"
-    },
-    {
-      "texture": "almirisweapons:item/2d/arquebus",
-      "transform": "fixed"
-    }
-  ]
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "almirisweapons:item/arquebus"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-35, 90, 0],
+			"translation": [0, 1.5, -2.75]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-35, -90, 0],
+			"translation": [0, 1.5, -2.75]
+		},
+		"firstperson_righthand": {
+			"rotation": [-35, 90, 0],
+			"translation": [0, 5, -2.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-35, -90, 0],
+			"translation": [0, 5, -2.75]
+		},
+		"ground": {
+			"translation": [0, 2, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"fixed": {
+			"rotation": [0, 180, 0],
+			"scale": [0.6, 0.6, 0.6]
+		}
+	}
 }

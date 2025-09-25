@@ -1,18 +1,39 @@
 {
-  "parent": "forge:composite",
-  "base": "almirisweapons:item/blunderbuss_3d",
-  "overlays": [
-    {
-      "texture": "almirisweapons:item/2d/blunderbuss",
-      "transform": "gui"
-    },
-    {
-      "texture": "almirisweapons:item/2d/blunderbuss",
-      "transform": "ground"
-    },
-    {
-      "texture": "almirisweapons:item/2d/blunderbuss",
-      "transform": "fixed"
-    }
-  ]
+	"format_version": "1.21.6",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "almirisweapons:item/blunderbuss"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-45, 90, 0],
+			"translation": [0, 0, -2.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-45, -90, 0],
+			"translation": [0, 0, -2.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [-45, 90, 0],
+			"translation": [0, 4, -1]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-45, -90, 0],
+			"translation": [0, 4, -1]
+		},
+		"ground": {
+			"translation": [0, 2.25, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"gui": {
+			"translation": [0.5, 0, 0],
+			"scale": [0.85, 0.85, 0.85]
+		},
+		"fixed": {
+			"rotation": [0, -180, 0],
+			"translation": [-1, 0, 0],
+			"scale": [0.6, 0.6, 0.6]
+		}
+	}
 }
