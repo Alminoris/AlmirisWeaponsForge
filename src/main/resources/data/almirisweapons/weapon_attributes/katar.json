@@ -1,6 +1,6 @@
 {
   "attributes": {
-    "range_bonus": -0.5,
+    "attack_range": 2.1,
     "category": "katar",
     "attacks": [
       {
